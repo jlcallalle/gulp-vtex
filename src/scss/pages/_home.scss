@@ -1,0 +1,829 @@
+#header {
+	.in {
+		#nav {
+			.category {
+			    @include min-screen($mobile) {  
+					padding: 0;
+				    display: flex;
+				    justify-content: flex-end;
+				}
+			    li {
+			    	@include min-screen($mobile) {  
+					    width: auto;
+					    padding: 0 10px;
+				    }
+				    &.i {
+				    	@include min-screen($mobile) {   
+				    	    width: 42px;
+						    height: 50px;
+						    margin: 0 15px 0 0;
+						}
+						&:hover {
+							&:before {
+								background: transparent;
+							}
+						}
+						> a {
+							display: none;
+							@include min-screen($mobile) {    
+								width: 42px;
+							    height: 50px;
+							    background-image: url(/arquivos/icon-hamburgesa.jpg);
+							    background-repeat: no-repeat;
+							    background-position: top center;
+							    display: inline-block;
+						    }
+						}
+						 &.active {
+					    	> a {
+								@include min-screen($mobile) {    
+								    background-image: url(/arquivos/icon-hamburgesa-hover.jpg);
+							    }
+							}
+
+					    }
+				    }
+				    .wHoverNav {
+				    	&.i {
+				    		background-repeat: no-repeat;
+							background-position: top center;
+							background-color: #131f55;
+						    width: 320px;
+						    right: -9px;
+						    left: auto;
+						    padding: 0;	
+
+						    @include max-screen($mobile) {    
+							    top: 0;
+							    display: block!important;
+							    left: 0;
+							    width: 100%;
+						    }
+
+
+						    ul {
+						    	width: 100%;
+    							padding: 0;
+    							li {
+    								display: block;
+								    text-align: left;
+								    padding: 0;
+								    background: #131f55;
+								    &:hover {
+								    	background: #68b3bb;
+								    	&:before {
+								    		background: transparent;
+								    	}
+								    	a {
+								    		color:white;
+								    	}
+								    }
+								    &:last-child {
+								    	border-bottom: none;
+								    }
+								    a {
+								    	color: white;
+									    line-height: 10px;
+									    padding: 20px 20px;
+									    display: block;
+								    }
+    							}
+						    }
+
+				    	}
+
+				    	.sub {
+				    		.list {
+				    			a{
+				    				&:hover {
+				    					transition: all .25s ease-in-out;
+				    					-webkit-transition: all .25s ease-in-out;
+							            -moz-transition: all .25s ease-in-out;
+							            -ms-transition: all .25s ease-in-out;
+							            -o-transition: all .25s ease-in-out;
+     									color: #131f55;
+				    				}
+				    			}
+				    		}
+				    	}
+				    }
+				    &.hide {
+				    	display: none;
+				    }
+
+
+			    }
+			   
+			}
+		}
+	}
+} 
+
+
+.dm_mobile #header .in #nav .category {
+	 background-repeat: no-repeat;
+	 background-position: top center;
+}
+
+
+.contentPlaza {
+	background: rgba(255, 0, 0, 0.1);
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    display: none; 
+}
+
+
+.modulo.ofertas .collection ul {
+	.contentPlaza {
+	 	li  {
+		    width: auto;
+		    height: auto;
+		    background: transparent;
+		    border: none;
+		    &:last-child {
+		    	&:before {
+		    		background: none;
+		    	}
+		    }
+		    &:first-child {
+		    	&:before {
+		    		background: none;
+		    	}
+		    }
+		 }
+	 } 
+}
+
+
+#compare-header {
+	display: none;
+}
+.modulo-comparar {
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-color: #cdcdcd;
+    position: fixed;
+    bottom: 0;
+    z-index: 99999;
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    @include min-screen($mobile) {  
+    	padding: 20px;
+		height: 120px;
+		padding: 0;
+	}
+
+    .box-comparar {
+	    margin: 0 auto;
+	    display: flex;
+	    align-items: center;
+	    height: 100%;
+	    flex-direction: column;
+	    @include min-screen($mobile) {  
+			flex-direction: row;
+		}
+
+		@media (min-width: $mobile) and (max-width: 1280px) { // or #{$retina}
+			max-width: auto;
+			padding: 0 20px;
+		}
+
+    }
+
+  .compare-items {
+  	    padding: 0;
+	    display: flex;
+	    width: 100%;
+	    justify-content: space-around;
+	  	@include min-screen($mobile) {  
+			padding: 0 35px;
+			display: block;
+			width: 100%;
+			display: flex;
+			justify-content: flex-start;
+		}
+
+		@media (min-width: $mobile) and (max-width: 1280px) { // or #{$retina}
+			padding: 0;
+		}
+	    
+    	.item {
+	        display: inline-block;
+		    vertical-align: top;
+		    position: relative;
+		    margin: 0 4px;
+		    background: white;
+		    width: 50%;
+		    //width: 33%;
+		    max-width: 200px;
+		    @include min-screen($mobile) {   
+				margin: 0 6px;
+				//width: 435px;
+				width: 32%;
+				max-width: 435px;
+		    	height: 85px;
+		    	max-width: auto;
+		    }
+
+		    @media (min-width: $mobile) and (max-width: 1280px) { // or #{$retina}
+				width: 28%;
+			}
+	    .prod {
+		    display: flex;
+		    align-items: center;
+		    height: 100%;
+		    padding: 0;
+		    justify-content: center;
+		    @include min-screen($mobile) {  
+		    	// padding: 0 26px; 
+		    	padding: 0 26px 0 20px; 
+		    	justify-content: normal;
+		    }
+
+		    @media (min-width: $mobile) and (max-width: 1280px) { // or #{$retina}
+				padding: 0 15px; 
+			}
+		    img {
+		    	width: 90px;
+		    	@include min-screen($mobile) {   
+					// padding: 0 30px 0 0;
+					padding: 0 10px 0 0;
+					// width: 100px;
+					width: 80px;
+		    	}
+		    	@media (min-width: $mobile) and (max-width: 1280px) { // or #{$retina}
+					padding: 0 5px 0 0;
+				}
+		    }
+		    .name {
+		    	display: none;
+		    	@include min-screen($mobile) { 
+					display: block;
+		    	}
+
+		    	h4 {
+		    		@media (min-width: $mobile) and (max-width: 1280px) { // or #{$retina}
+						font-size: 11px;
+					}
+		    	}
+		    	.precio-compara {
+		    		span {
+		    			@media (min-width: $mobile) and (max-width: 1280px) { // or #{$retina}
+							font-size: 11px;
+						}
+		    		}
+		    		.precio-desc {
+		    			display: none;
+		    		}
+		    		.precio-final {
+		    			color: #666666;
+    					font-size: 14px;
+		    		}
+		    	}
+		    }
+		    h4 {
+		    	@include min-screen($mobile) {  
+			    	font-size: 14px;
+    				color: #666666;
+			    }
+
+			    @media (min-width: $mobile) and (max-width: 1380px) { // or #{$retina}
+					font-size: 12px;
+				}
+		    }
+		}
+      &.empty:before {
+        opacity: 1;
+      }
+      &:before {
+        content: "Agregar producto";
+        opacity: 0;
+        margin: auto;
+        line-height: 20px;
+        font-size: 11px;
+        text-align: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        -webkit-transition: opacity .25s;
+        transition: opacity .25s;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        @include min-screen($mobile) {  
+        	font-size: 16px; 
+        }
+      }
+    }
+  }
+  .btn.compare {
+    margin: 0;
+    text-align: center;
+    clear: none;
+    height: 33px;
+    line-height: 31px;
+    background: #141f55;
+    color: #fff;
+    cursor: pointer;
+    text-transform: none;
+    -webkit-transition: all .25s;
+    transition: all .25s;
+    width: 100%;
+    font-size: 14px;
+    @include min-screen($mobile) {  
+    	width: 150px; 
+    }
+
+    &.disabled {
+      opacity: .3;
+    }
+    
+  }
+}
+
+.remove {
+    position: absolute;
+    cursor: pointer;
+    opacity: .5;
+    -webkit-transition: all .25s;
+    transition: all .25s;
+    top: 3px;
+    right: 3px;
+    @include min-screen($mobile) {  
+		top: 10px;
+    	right: 18px;
+    }
+    @media (min-width: $mobile) and (max-width: 1280px) { // or #{$retina}
+		top: 5px;
+    	right: 10px;
+	}
+   
+
+}
+
+.content-btn {
+    // background: rgba(255,0,0,0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin:15px 0 0 0;
+    @include min-screen($mobile) {   
+		margin:0;
+		width: 200px;
+		padding: 0 38px;
+    }
+
+    @media (min-width: $mobile) and (max-width: 1280px) { // or #{$retina}
+	    width: auto;
+	    padding: 0
+	}
+
+
+}
+
+.modulo.ofertas .collection ul li:nth-child(2) {
+	background-repeat: no-repeat;
+	background-position: top center;
+	
+}
+
+#content.list .right .main .resultItemsWrapper .itemProduct .itemProduct ul li:nth-child(2) {
+	background-repeat: no-repeat;
+	background-position: top center;
+}
+
+
+.modulo.ofertas .collection ul {
+	&.slick-dots {
+		bottom: -26px;
+		li {
+		    width: auto;
+		    height: auto;
+		    margin: 0 5px;
+		    background: transparent;
+		    border: none;
+		    &:before {
+		    	display: none;
+		    }
+		}
+	}
+}
+
+.modulo.interes .collection ul {
+	&.slick-dots {
+		bottom: -26px;
+		li {
+		    width: auto;
+		    height: auto;
+		    margin: 0 5px;
+		    background: transparent;
+		    border: none;
+		    &:before {
+		    	display: none;
+		    }
+		}
+	}
+}
+
+
+//Home Suscribete
+.modulo.news #frmMasterData {
+	display: none;
+} 
+.box-suscribete {
+    text-align: center;
+    padding: 20px 0 0 0;
+}
+
+.btn-suscribete {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: white;
+    background: #434040;
+    width: 180px;
+    height: 40px;
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    border:0;
+    transition: all .25s ease-in-out;
+    -webkit-transition: all .25s ease-in-out;
+    -moz-transition: all .25s ease-in-out;
+    -ms-transition: all .25s ease-in-out;
+    -o-transition: all .25s ease-in-out;
+    &:hover {
+    	background: #141f55;
+    }
+}
+
+.btn-suscribete-popup {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: white;
+    background: #434040;
+    width: 180px;
+    height: 40px;
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    border:0;
+    cursor:pointer;
+    transition: all .25s ease-in-out;
+    -webkit-transition: all .25s ease-in-out;
+    -moz-transition: all .25s ease-in-out;
+    -ms-transition: all .25s ease-in-out;
+    -o-transition: all .25s ease-in-out;
+     &:hover {
+    	background: #141f55;
+    }
+}
+
+
+//reset fancybox
+.fancybox-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    display: none;
+    z-index: 8010;
+    background: url(../arquivos/fancybox_overlay.png)!important;
+}
+
+//popup suscribete
+.contenido_suscribete{
+	background-color: white;
+	background-repeat: no-repeat;
+	background-position: top center;
+	@include min-screen($mobile)  {
+		background-color: #eef2f4;
+		background-image: url(/arquivos/bg-contacto.jpg);
+		width: 810px;
+		height: 555px;
+    }
+}
+
+.fancybox-suscribete-cliente {
+	.fancybox-opened .fancybox-skin {
+	       box-shadow: none;
+	}
+	.fancybox-skin {
+		 border-radius: 0;
+		 background-color:white;
+		 @include min-screen($mobile)  { 
+			background-color:#f9f9f9;
+		 }
+
+		.fancybox-close{
+				background-image: url('../arquivos/close-popup.jpg');
+				background-repeat: no-repeat;
+				width: 32px;
+				height: 28px;
+				top: 0;
+			    right: 0;
+			    background-size: 100%;
+			    @include min-screen($mobile)  {  
+			    	background-size: none;
+			    }
+		}
+	}
+}
+
+
+.box-contenido-suscribete {
+	position: relative;
+	.logo-popup {
+		background-image: url(../arquivos/sprites.png);
+	    background-repeat: no-repeat;
+	    background-position: -260px -1px;
+	    width: 115px;
+	    height: 100px;
+	    margin:0 auto;
+	    top: 0;
+	    left: 0;
+	    position: relative;
+	    @include min-screen($mobile)  { 
+			position: absolute;
+	    }
+	}
+}
+.form-popup {
+    padding: 20px;
+    @include min-screen($mobile)  { 
+    	display: flex;
+    	float: right;
+		width: 370px;
+    	padding: 20px 72px 0 0;
+    }
+}
+
+.box-formulario {
+    padding: 20px 0;
+    h3 {
+	    font-size: 17px;
+	    color: #434040;
+	    font-weight: 600;
+	     span {
+		    display: block;
+		}
+	}
+
+	 h4 {
+	    font-size: 13px;
+	    font-weight: 300;
+	    span {
+	    	display: block;
+	    }
+	}
+
+	.form-control {
+	    font-size: 13px;
+	    margin: 0 0 10px 0;
+	    padding: 6px 10px;
+	    &.error {
+	    	border:1px solid red;
+	    }
+	}
+
+	label.error {
+	    display: none!important;
+	}
+
+	.content-btn {
+	    margin: 0;
+	    width: auto;
+	    padding: 0 38px;
+	}
+
+
+	.group {
+	    padding: 20px 0 2px 0;
+	}
+
+
+	.lista-insteres {
+	    padding: 2px 0 13px 33px;
+	    display: flex;
+	    flex-wrap: wrap;
+
+	    .form-check {
+		    width: 121px;
+		}
+
+	}
+	.form-check {
+	     label {
+		    font-size: 13px;
+		    font-weight: 300;
+		}
+	}
+
+	.group-captcha {
+		background-image: url('../arquivos/capcha.jpg');
+		background-repeat: no-repeat;
+		background-position: top center;
+		width: 303px;
+		height: 76px;
+	}
+
+
+	.terminos {
+	    padding: 7px 12px 15px;
+	    .form-check {
+		    font-size: 11px;
+		    display: flex;
+		    label {
+			    padding: 0 0 0 9px;
+			}
+		}
+		a {
+			text-decoration: underline;
+		}
+	}
+
+}
+
+
+.box-gracias {
+    padding: 0;
+    display: flex;
+    margin: 60px 10px;
+    border: 1px solid #e0e0e0;
+    max-width: 360px;
+
+    @include min-screen($mobile)  {  
+	 	margin: 110px 0;
+	 	width: 320px;
+	 	float: right;
+	 	max-width: auto;
+    }
+
+    .box-gracias-inner {
+	    border: 1px solid #c2c2c2;
+	    padding: 40px 20px;
+	    margin: 15px;
+	    @include min-screen($mobile)  { 
+			padding: 44px 20px 45px 23px;
+	    }
+	}
+
+	p {
+	    font-size: 17px;
+	    margin: 0 0 18px 0;
+	     @include min-screen($mobile)  { 
+			font-size: 18px;;
+	    }
+	}
+
+}
+
+.li-fixed-car {
+	
+}
+
+#header {
+	.fixed-car {
+		 .btn-cart {
+		    display: inline-block;
+		    cursor: pointer;
+		    width: 24px;
+		    position: relative;
+		    margin: 12px 0 0 10px;
+		    float: right;
+		    .btn {
+			    background: none;
+			    padding: 0;
+			    text-shadow: none;
+			    border: 0;
+			    .fa {
+				    position: absolute;
+				    bottom: -17px;
+				    right: 36px;
+				    font-size: 24px;
+				    opacity: 0;
+				    display: none;
+				}
+			}
+			.info.vcenter {
+			    text-align: right;
+			    display: block;
+			    span.num {
+				    position: absolute;
+				    top: 8px;
+				    left: 16px;
+				    background: #121f55;
+				    border-radius: 15px;
+				    width: 13px;
+				    height: 13px;
+				    font-size: 10px;
+				    text-align: center;
+				    line-height: 13px;
+				    z-index: 50;
+				    color: #fff;
+				}
+
+				p {
+				    position: relative;
+				}
+
+				p.tit {
+				    margin: 0;
+				    font-weight: 400;
+				    font-size: 12px;
+				    color: #fff;
+				    position: absolute;
+				    top: 4px;
+				    left: 42px;
+				    display: none;
+				}
+
+				p.precio {
+				    display: none;
+				    width: 70px;
+				    text-align: left;
+				    position: absolute;
+				    top: 18px;
+				    left: 42px;
+				    display: none;
+				}
+			}
+			.carrito .cart {
+			    transition: all .2s ease-in-out;
+			    display: block;
+			    width: 29px;
+			    height: 25px;
+
+			    margin: 0;
+			    line-height: normal;
+			    background-image: none!important;
+
+			    &.icon-drimer-car {
+			      	&:before {
+			      		color:#121f55;
+					    position: relative;
+					    left: -6px;
+					    font-size: 30px;
+					    top: -3px;
+					    @include min-screen($mobile)  { 
+						    font-size: 27px;
+						    top: -1px; 
+					    }
+			      	}
+			      }
+			}
+			.pre-cart {
+			    border: 1px solid #06295B;
+			    display: none;
+			    z-index: 500;
+			    position: absolute;
+			    top: 22px;
+			    right: -2px;
+			    background: #fff;
+			    width: 500px;
+			    border-radius: 4px;
+			}
+		}
+	}
+}
+
+#header {
+	&.ocultar-header {
+		.in {
+			#nav {
+				.category {
+					li {
+						&.li-fixed-car {
+							display: block;
+						}
+						&.i {
+							> a {
+								 background-image: url(/arquivos/icon-hamburgesa-fixed.jpg);
+							}
+						}
+						&.li-fixed-car {
+							&:hover {
+								&:before {
+									 background: white;
+								}
+							}
+						}
+						
+					}
+				}
+			}
+		}
+	}
+}

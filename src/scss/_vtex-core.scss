@@ -1,0 +1,599 @@
+/* Box VTEX */
+
+// bg-popup.jpg
+
+.vtexIdUI {
+	box-shadow: 0;
+}
+	
+#vtexIdContainer {
+    position: fixed!important;
+    .vtexIdUI {
+    	// border:1px solid red;
+		// background-image: url(/arquivos/bg-popup.jpg);
+	   
+	    margin: auto;
+	    top: 0;
+	    left: 0;
+	    right: 0;
+	    bottom: 0;
+	    font-family: 'Montserrat', sans-serif!important;
+
+	    @include min-screen($mobile) {    
+ 			width: 828px;
+	    	// height: 401px!important;
+	    }
+
+    	.modal-body {
+    		background: transparent;
+    	}
+
+    	.vtexIdUI-page#vtexIdUI-auth-selector  {
+    	// .vtexIdUI-page {
+		    .modal-header {
+		     	height: 67px;
+		     	padding: 9px 15px;
+			    background-color: #eeeeee;
+			    @include min-screen($mobile) {     
+					padding: 13px 15px;
+			    }
+			    h4 {
+			    	line-height: 21px;
+			    	color:#131f55;
+					font-size: 12px;
+				    text-align: center;
+				    font-weight: 400;
+				    transition: none;
+				    @include min-screen($mobile) {  
+						font-size: 18px;
+				    }
+			    }
+			    .close {
+				    background-color: #131f55;
+				    color: #fff;
+				    cursor: pointer;
+				    transition: all .3s;
+				    margin: 0;
+				    right: 0;
+				    line-height: 16px;
+				    padding: 0;
+
+				    font-size: 18px;
+				    width: 18px;
+				    height: 18px;
+				    @include min-screen($mobile) {  
+					    width: 30px;
+					    height: 30px;
+					   font-size: 21px;
+				    }
+				}
+
+		     }
+		    .modal-body {
+			    @include min-screen($mobile) {   
+				    background:  white;
+				    padding: 20px 10px;
+				    position: relative;
+				    display: flex;
+				    justify-content: flex-end;
+					padding: 37px 51px;
+			    }
+			    &:before {
+			    	@include min-screen($mobile) {   
+				    	position: absolute;
+					    content: "";
+					    width: 253px;
+					    height: 225px;
+					    left: 55px;
+					    top: 54px;
+					    background-image: url(../arquivos/logo-login.jpg);
+				    }
+			    }
+
+			    li {
+				    @include min-screen($mobile) {  
+				    	margin: auto auto 20px; 
+						width: 410px;
+					    height: 50px;
+				    }
+				    button {
+					    width: 100%;
+					    height: 100%;
+					    box-shadow: none;
+					    border: 0;
+					    border-radius: 0;
+					    background: 0 0;
+					    padding: 10px 8px;
+					    transition: opacity .25s;
+					    @include min-screen($mobile) {   
+ 							padding: 0;
+					    }
+					    &:before {
+						    display: none;
+							@include min-screen($mobile) {  
+								display: block;
+								content: "";
+							    font-family: FontAwesome!important;
+							    width: 48px;
+							    min-width: 48px;
+							    height: 37px;
+							    display: inline-block;
+							    float: left;
+							    border-right: 1px solid #FFF;
+							    vertical-align: middle;
+							    font-size: 1.25rem;
+							    line-height: 37px;
+						        color: #FFF
+						    }
+
+					    }
+					    &:hover {
+					    	 opacity: .8
+					    }
+					    > p, > span {
+					    	font-weight: 400;
+					    	@include min-screen($mobile) {   
+						    	vertical-align: middle;
+							    line-height: 37px;
+							    font-size: 12px;
+							    letter-spacing: 1px;
+							    color: #FFF;
+							    text-shadow: none;
+						    }
+					    }
+					}
+				}
+			}
+		}
+
+
+
+		#vtexIdUI-email-confirmation {
+			.modal-header {
+			 	height: 67px;
+			 	padding: 9px 15px;
+			    background-color: #eeeeee;
+			    @include min-screen($mobile) {     
+					padding: 13px 15px;
+			    }
+			    h4 {
+			    	line-height: 21px;
+			    	color:#131f55;
+					font-size: 12px;
+				    text-align: center;
+				    font-weight: 400;
+				    transition: none;
+				    @include min-screen($mobile) {  
+						font-size: 18px;
+				    }
+			    }
+			    .close {
+				    background-color: #131f55;
+				    color: #fff;
+				    cursor: pointer;
+				    transition: all .3s;
+				    margin: 0;
+				    right: 0;
+				    line-height: 16px;
+				    padding: 0;
+
+				    font-size: 18px;
+				    width: 18px;
+				    height: 18px;
+				    @include min-screen($mobile) {  
+					    width: 30px;
+					    height: 30px;
+					   font-size: 21px;
+				    }
+				}
+
+			 }
+			.modal-body {
+			    @include min-screen($mobile) {   
+			    	// border:1px solid orange;
+				    background:  white;
+				    padding: 20px 10px;
+				    position: relative;
+				    display: flex;
+				    justify-content: flex-end;
+					padding: 37px 51px;
+					// height: 401px;
+					 // /* box-sizing: content-box; */
+   					 // height: 250px;
+   					 height: 280px;
+   					 overflow: hidden;
+
+			    }
+			    &:before {
+			    	@include min-screen($mobile) {   
+				    	position: absolute;
+					    content: "";
+					    width: 253px;
+					    height: 225px;
+					    left: 55px;
+					    // top: 54px;
+					    top: 30px;
+					    background-image: url(../arquivos/logo-login.jpg);
+				    }
+			    }
+			}
+		}
+
+
+		//confirmacion acceso codigo
+		#vtexIdUI-confirm-access-code {
+			.modal-header {
+			 	height: 67px;
+			 	padding: 9px 15px;
+			    background-color: #eeeeee;
+			    @include min-screen($mobile) {     
+					padding: 13px 15px;
+			    }
+			    h4 {
+			    	line-height: 21px;
+			    	color:#131f55;
+					font-size: 12px;
+				    text-align: center;
+				    font-weight: 400;
+				    transition: none;
+				    @include min-screen($mobile) {  
+						font-size: 18px;
+				    }
+			    }
+			    .close {
+				    background-color: #131f55;
+				    color: #fff;
+				    cursor: pointer;
+				    transition: all .3s;
+				    margin: 0;
+				    right: 0;
+				    line-height: 16px;
+				    padding: 0;
+
+				    font-size: 18px;
+				    width: 18px;
+				    height: 18px;
+				    @include min-screen($mobile) {  
+					    width: 30px;
+					    height: 30px;
+					   font-size: 21px;
+				    }
+				}
+
+			 }
+			.modal-body {
+			    @include min-screen($mobile) {   
+				    background:  white;
+				    padding: 20px 10px;
+				    position: relative;
+				    display: flex;
+				    // justify-content: flex-end;
+					padding: 37px 51px;
+					// height: 401px;
+					 // /* box-sizing: content-box; */
+   					 // height: 250px;
+   					 height: 280px;
+   					 overflow: hidden;
+   					 flex-direction: column;
+    				 padding-left: 349px;
+
+			    }
+			    &:before {
+			    	@include min-screen($mobile) {   
+				    	position: absolute;
+					    content: "";
+					    width: 253px;
+					    height: 225px;
+					    left: 55px;
+					    // top: 54px;
+					    top: 30px;
+					    background-image: url(../arquivos/logo-login.jpg);
+				    }
+			    }
+			}
+
+			.vtexIdUI-code-field {
+				@include min-screen($mobile) {   
+					padding: 12px 0 0 0;
+					width: auto;
+				}
+				input {
+					@include min-screen($mobile) {    
+						width: 292px;
+					    font-size: 14px;
+					    height: 40px;
+					    background: #f2f2f2;
+					    line-height: 40px;
+					    border: 0;
+					    border-radius: 0;
+					    font-weight: 400;
+					    box-shadow: none;
+				    }
+
+				}
+			}
+
+			.info-code {
+				@include min-screen($mobile) {  
+			    	line-height: 24px;
+			    }
+			}
+
+
+
+		}
+
+		
+		//Ingreso con email y contraseña
+		#vtexIdUI-classic-login {
+			.modal-header {
+			 	height: 67px;
+			 	padding: 9px 15px;
+			    background-color: #eeeeee;
+			    @include min-screen($mobile) {     
+					padding: 13px 15px;
+			    }
+			    h4 {
+			    	line-height: 21px;
+			    	color:#131f55;
+					font-size: 12px;
+				    text-align: center;
+				    font-weight: 400;
+				    transition: none;
+				    @include min-screen($mobile) {  
+						font-size: 18px;
+				    }
+			    }
+			    .close {
+				    background-color: #131f55;
+				    color: #fff;
+				    cursor: pointer;
+				    transition: all .3s;
+				    margin: 0;
+				    right: 0;
+				    line-height: 16px;
+				    padding: 0;
+
+				    font-size: 18px;
+				    width: 18px;
+				    height: 18px;
+				    @include min-screen($mobile) {  
+					    width: 30px;
+					    height: 30px;
+					   font-size: 21px;
+				    }
+				}
+
+			 }
+			.modal-body {
+			    @include min-screen($mobile) {   
+				    background:  white;
+				    padding: 20px 10px;
+				    position: relative;
+				    display: flex;
+				    // justify-content: flex-end;
+					padding: 37px 51px;
+					// height: 401px;
+					 // /* box-sizing: content-box; */
+   					 // height: 250px;
+   					 height: 280px;
+   					 overflow: hidden;
+   					 flex-direction: column;
+    				 padding-left: 349px;
+
+			    }
+			    &:before {
+			    	@include min-screen($mobile) {   
+				    	position: absolute;
+					    content: "";
+					    width: 253px;
+					    height: 225px;
+					    left: 55px;
+					    // top: 54px;
+					    top: 30px;
+					    background-image: url(../arquivos/logo-login.jpg);
+				    }
+			    }
+
+			   
+			}
+		}
+
+		// Cambiar Contraseña
+		#vtexIdUI-change-pswd {
+			.modal-header {
+			 	height: 67px;
+			 	padding: 9px 15px;
+			    background-color: #eeeeee;
+			    @include min-screen($mobile) {     
+					padding: 13px 15px;
+			    }
+			    h4 {
+			    	line-height: 21px;
+			    	color:#131f55;
+					font-size: 12px;
+				    text-align: center;
+				    font-weight: 400;
+				    transition: none;
+				    @include min-screen($mobile) {  
+						font-size: 18px;
+				    }
+			    }
+			    .close {
+				    background-color: #131f55;
+				    color: #fff;
+				    cursor: pointer;
+				    transition: all .3s;
+				    margin: 0;
+				    right: 0;
+				    line-height: 16px;
+				    padding: 0;
+
+				    font-size: 18px;
+				    width: 18px;
+				    height: 18px;
+				    @include min-screen($mobile) {  
+					    width: 30px;
+					    height: 30px;
+					   font-size: 21px;
+				    }
+				}
+
+			 }
+			.modal-body {
+			    @include min-screen($mobile) {   
+				    background:  white;
+				    position: relative;
+				    display: flex;
+				    // justify-content: flex-end;
+					// padding: 37px 51px;
+					padding: 12px 51px;
+					// height: 401px;
+					 // /* box-sizing: content-box; */
+   					 // height: 250px;
+   					 // height: 280px;
+   					 height: 300px;
+   					 overflow: hidden;
+   					 flex-direction: column;
+    				 padding-left: 349px;
+
+			    }
+			    &:before {
+			    	@include min-screen($mobile) {   
+				    	position: absolute;
+					    content: "";
+					    width: 253px;
+					    height: 225px;
+					    left: 55px;
+					    // top: 54px;
+					    top: 30px;
+					    background-image: url(../arquivos/logo-login.jpg);
+				    }
+			    }
+			}
+
+			.vtexIdUI-user {
+				 @include min-screen($mobile) {    
+					position: absolute;
+				 }
+			}
+		}
+
+
+
+    }
+}
+
+
+#vtexIdContainer .vtexIdUI .vtexIdUI-page#vtexIdUI-email-confirmation .modal-body .vtexIdUI-email-field:before {
+    content: "E-mail";
+    width: 292px;
+    font-size: .875rem;
+    display: block;
+    margin: auto auto 9px;
+    font-weight: 400;
+}
+
+
+.vtexIdUI .vtexIdUI-others-send-email {
+	background-image: none;
+}
+#vtexIdContainer .vtexIdUI .vtexIdUI-page .modal-body li button i {
+    display: none
+}
+
+#vtexIdContainer .vtexIdUI .vtexIdUI-page .modal-body li button#loginWithAccessKeyBtn {
+    background-color: #333;
+}
+
+#vtexIdContainer .vtexIdUI .vtexIdUI-page .modal-body li button#loginWithAccessKeyBtn:before {
+    // content: "\e91b"
+   content: "\f0e0";
+}
+
+#vtexIdContainer .vtexIdUI .vtexIdUI-page .modal-body li button#vtexIdUI-facebook {
+    background-color: #3B5999;
+}
+
+#vtexIdContainer .vtexIdUI .vtexIdUI-page .modal-body li button#vtexIdUI-facebook:before {
+    // content: "\e911"
+    content: "\f09a";
+}
+
+#vtexIdContainer .vtexIdUI .vtexIdUI-page .modal-body li button#vtexIdUI-google-plus {
+    background-color: #F5443C;
+    color:white;
+}
+
+#vtexIdContainer .vtexIdUI .vtexIdUI-page .modal-body li button#vtexIdUI-google-plus:before {
+    // content: "\e919";
+    content: "\f0d5";
+}
+
+#vtexIdContainer .vtexIdUI .vtexIdUI-page .modal-body li button#loginWithUserAndPasswordBtn {
+     background-color: #9fd5de;
+     color:#121f55;
+     span {
+     	color:white;
+     	text-shadow: none;
+     }
+}
+
+#vtexIdContainer .vtexIdUI .vtexIdUI-page button#loginWithUserAndPasswordBtn {
+	background-color: #9fd5de;
+	span {
+	 color:#121f55;
+	}
+}
+
+
+#vtexIdContainer .vtexIdUI .vtexIdUI-page .modal-body li button#loginWithUserAndPasswordBtn:before {
+    content: "\f09c";
+     color:#121f55;
+}
+
+
+#vtexIdContainer .vtexIdUI .vtexIdUI-page .modal-body li button#guestUser{
+    background-color: #F5443C;
+}
+
+// login 
+.vtexIdUI [data-i18n="vtexid.forgotPswdHelper"] {
+    font-size: 0!important;
+}
+
+
+.vtexIdUI [data-i18n="vtexid.forgotPswdHelper"]:before {
+    content: '¿No sabe o no recuerda cuál? Regístrala ahora';
+    display: inline-block;
+    font-size: 13px;
+    @include min-screen($mobile) {  
+		font-size: 14px;
+    }
+}
+
+.vtexIdUI [data-i18n="vtexid.accessTokenTitle"] {
+    font-size: 0;
+}
+
+.vtexIdUI [data-i18n="vtexid.accessTokenTitle"]:before {
+    content: 'Ingrese la clave de acceso';
+    display: inline-block;
+    font-size: 12px;
+    @include min-screen($mobile) {  
+		font-size: 18px;
+    }
+}
+
+.vtexIdUI [data-i18n="vtexid.getEmailTitle"] {
+    font-size: 0;
+}
+
+.vtexIdUI [data-i18n="vtexid.getEmailTitle"]:before {
+    content: 'Por favor, ingrese su mail';
+    display: inline-block;
+    font-size: 12px;
+    @include min-screen($mobile) {  
+		font-size: 18px;
+    }
+}

@@ -1,0 +1,17 @@
+/* Mixins
+  =============== */
+
+/// Container's maximum width
+
+// $max-width: 1000px;
+$max-width: 1180px;
+
+@mixin contenedor() {
+    max-width: $max-width;
+    margin: 0 auto;
+}
+
+.contenedor {
+    @include contenedor;
+    padding: 0 20px;
+}

@@ -1,0 +1,332 @@
+.tiendas {
+	border:4px solid blue;
+	.module.title {
+		display:block;
+		.sup {
+			.center {
+				@include min-screen($mobile) {  
+					padding: 0;
+				}
+			}
+			.titulo-tiendas {
+			      font-family: 'Montserrat', sans-serif;
+			      font-size: 30px;
+			      line-height: 33px;
+			      font-weight: 600;
+			      color: #1d2454;
+			      text-align: left;
+			      margin: 40px 0 0 0;
+			      @include min-screen($mobile) {  
+					margin: 130px 0 0 0;
+					font-size: 49px;
+					line-height: 45px;
+				  }
+			      &:after {
+			        display: block;
+			        content: "";
+			        width: 32px;
+			        height: 7px;
+			        background:#1d2454;
+			        margin-top: 5px;
+			      }
+			}
+
+			.descrip {
+				text-shadow: none;
+				width: 100%;
+				@include min-screen($mobile) {  
+					width:670px;
+					margin:18px 0 0 0;
+				}
+				&:before {
+					display: none;
+				}
+				p {
+					color: #131f55;
+    				font-size: 14px;
+    				font-weight: 400;
+					@include min-screen($mobile) {  
+						font-size: 24px;
+						font-family:  'Montserrat', sans-serif;
+					  
+					}
+				}
+			}
+		}
+	}
+
+
+	.box-banner {
+		background: #96dde3;
+		height: 180px;
+		background-image: url(../arquivos/bg-legales.jpg);
+		background-position: 926px -57px;
+		@include min-screen($mobile) {  
+			height: auto;
+			background-image: none;
+		}
+		a {
+			img {
+				display: none;
+				@include min-screen($mobile) { 
+					display: block;
+				}
+			}
+		}
+	}
+
+	#content.list {
+		background-repeat: no-repeat;
+		background-position: top center;
+	}
+
+}
+
+
+.box-tiendas {
+	padding: 10px 0  0 0;
+	@include min-screen($mobile) {   
+		padding: 42px 0  0 0;
+	}
+
+	.box-fecha {
+	    margin: 6px 0 12px 0;
+	}
+}
+
+.box-mapa {
+	background-repeat: no-repeat;
+	background-position: top center;
+	height: 559px;
+	display: none;
+	@include min-screen($mobile) {   
+		display: block;
+	}
+	span {
+		display: none;
+	}
+}
+
+.box-lista-tiendas {
+    margin: 36px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    @include min-screen($mobile) {  
+		flex-direction: row;
+	} 
+    .sidebar-tienda {
+    	@include min-screen($mobile) {  
+			width: 430px;
+		} 
+    }
+    .detalle-tienda {
+    	padding: 30px 20px;
+    	display: none;
+    	@include min-screen($mobile) {   
+    		display: block;
+			width: 850px;
+			padding: 9px 0 0 36px;
+    	}
+    	
+    	h2 {
+    		font-size: 16px;
+		    font-weight: bold;
+		    text-transform: uppercase;
+		    padding: 0 0 0 14px;
+    	}
+    }
+    .detalle-tienda-movil {
+    	display: block;
+    	@include min-screen($mobile) {
+    		display: none;
+    	}
+    }
+}
+
+.box-tiendas-all {
+	display: flex;
+	flex-direction: column;
+	padding: 10px 0 0 0;
+	.box-tienda {
+	    display: flex;
+	    flex-direction: column;
+	    padding: 10px;
+	    @include min-screen($mobile) {   
+	    	flex-direction: row;
+			padding: 20px;
+			align-items: center;
+    	}
+
+	    &:nth-child(odd) {
+	    	background: #e8e8e8;
+	    }
+		.direccion {
+    		@include min-screen($mobile) {    
+    			width: 516px;
+    			border-right: 1px solid #949494;
+    		}
+			h3 {
+				color: #434040;
+				font-family: 'Montserrat', sans-serif;
+				font-size: 14px;
+				margin: 0 0 5px 0;
+				@include min-screen($mobile) {   
+					font-size: 16px;
+		    	}
+			}
+			h4 {
+				color: #434040;
+				font-family: 'Montserrat', sans-serif;
+				font-size: 14px;
+				margin: 0 0 5px 0;
+				font-weight: 300;
+				@include min-screen($mobile) {   
+					font-size: 16px;
+		    	}
+			}
+			a {
+				background-image:  url(../arquivos/map-google.png);
+			    background-repeat: no-repeat;
+			    background-position: top center;
+			    background-size: 15%;
+			    background-position: center right;
+			    padding: 0 28px 0 0;
+				color:#1cadc3;
+				font-family: 'Montserrat', sans-serif;
+				font-size: 14px;
+				@include min-screen($mobile) {   
+					background-image: none;
+					font-size: 16px;
+					padding: 0;
+		    	}
+			}
+		}
+		.horario {
+			margin:7px 0 0 0;
+    		@include min-screen($mobile) {   
+    			margin:0;
+				padding: 0 0 0 39px;
+    			width: 235px;
+    		}
+			span {
+				color: #434040;
+			    font-family: 'Montserrat', sans-serif;
+			    font-size: 14px;
+			    display: block;
+			    margin: 0 0 3px 0;
+			    @include min-screen($mobile) {   
+					font-size: 16px;
+		    	}
+			}
+			.hora {
+				@include min-screen($mobile) {   
+					font-weight: bold;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+.tiendas { 
+
+	.accordion, .accordion * {
+		-webkit-box-sizing:border-box; 
+		-moz-box-sizing:border-box; 
+		box-sizing:border-box;
+	}
+
+	.accordion {
+		overflow:hidden;
+		// background:#f7f7f7;
+		padding: 0 20px;
+		@include min-screen($mobile) {   
+			padding: 0 80px 0 45px;
+    	}
+		ul {
+			li {
+				a {
+					color: #6a6a6a;
+				    font-size: 16px;
+				    display: block;
+				    border-bottom: 1px solid #7f7f7f;
+				    padding: 10px 20px;
+				    &.active {
+						font-weight: bold;
+						color:black;
+					}
+				}
+
+			}
+		}
+	}
+
+	.accordion-section {
+	    margin: 0 0 10px 0;
+	}
+
+	.accordion-section-title {
+		width:100%;
+		padding:9px 30px;
+		display:inline-block;
+		background:#434040;
+		color:#fff;
+		justify-content: space-between;
+    	display: flex;
+    	font-size: 14px;
+    	@include min-screen($mobile) {  
+			font-size: 16px;
+		}
+    	&.active {
+			.icon-tab {
+				&:before {
+			    	content: "\f068";
+			    }
+			}
+		}
+		.icon-tab {
+		    display: inline-block;
+		    font: normal normal normal 14px/1 FontAwesome;
+		    font-size: inherit;
+		    text-rendering: auto;
+		    -webkit-font-smoothing: antialiased;
+		    -moz-osx-font-smoothing: grayscale;
+		    transform: translate(0, 0);
+		    &:before {
+		    	content: "\f067";
+		    }
+		}
+	}
+
+	.accordion-section-title.active, .accordion-section-title:hover {
+		background:#96dde3;
+		text-decoration:none;
+	}
+
+	.accordion-section:last-child .accordion-section-title {
+		border-bottom:none;
+	}
+
+	.accordion-section-content {
+		padding:10px 16px;
+		display:none;
+		&.open {
+			display: block;
+		}
+
+		p {
+			font-size: 14px;
+		    color: #6a6a6a;
+		    line-height: 22px;
+		    margin: 10px 0;
+		    text-align: justify;
+		    @include min-screen($mobile) {   
+				font-size: 15px;
+		    }
+		}
+	}
+
+}
+

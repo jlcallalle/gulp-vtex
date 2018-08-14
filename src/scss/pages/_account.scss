@@ -1,0 +1,521 @@
+.account {
+	.container {
+	    width: 100%;
+	    @include min-screen($mobile) { 
+ 			width: 940px;
+	    }
+	}
+
+	#header.fixed .row {
+	    margin: 0;
+	}
+
+	.row {
+	    margin: 0;
+	}
+
+	#content.list {
+	    background: #fbfbfb;
+	}
+
+
+	#account-content .address-display-unit h5:before {
+	    content: "Dirección: ";
+	    font-weight: 400;
+	    margin: 0 3px 0 0;
+	}
+
+	#account-content .profile-detail-display h5:before {
+	    content: "Nombre: ";
+	    display: inline-block;
+	    margin: 0 3px 0 0;
+	}
+
+	#account-content  .profile-detail-display .profile-detail-display-email:before {
+	    content: "E-mail: ";
+	}
+
+	 #content .edit-profile-link, 
+	 #content .new-address-link, 
+	 #content .orders-link {
+	    position: absolute;
+	    bottom: -50px;
+		left: 0;
+
+		@include min-screen($mobile) { 
+		    bottom: -60px;
+		}
+
+	    a {
+	    	display: inline-block;
+	 		position: relative;
+	    	width: 200px;
+		    height: 40px;
+
+		    background-color: #121f55;
+		    border-radius: 8px;
+		    text-align: center;
+		    padding: 10px;
+		    color: white;
+
+	    	color:white;
+	    	font-size: 15px;
+	    	line-height: 15px;
+	    	&:hover {
+	    		text-decoration: none;
+	    	}
+
+	    }
+	}
+
+	.profile-detail-display-state-inscription .title {
+	    font-size: 0;
+	    &:before {
+	    	font-size: 14px;
+	    	 content: 'Dirección de empresa: ';
+	    }
+	}
+
+	.profile-detail-display-telephone .title {
+	    font-size: 0;
+	    &:before {
+	    	font-size: 14px;
+	    	content: 'Celular: ';
+	    }
+	}
+	.profile-detail-display-cellphone .title {
+	    font-size: 0;
+	    &:before {
+	    	font-size: 14px;
+	    	content: 'Otro teléfono: ';
+	    }
+	}
+
+	#header .in #nav .category li .wHoverNav .sub .lista-marca a {
+	    box-sizing: content-box;
+	}
+
+	#header .in #nav .category li .wHoverNav a.btn {
+	    padding: 0;
+	    text-align: left;
+	}
+
+	#social .box-libros a.libro {
+	    color: #676969;
+	}
+
+	#footer {
+		@include min-screen($mobile) { 
+		   display: flex;
+		}
+	}
+
+
+
+
+}
+
+.box-cuenta {
+	padding: 20px 0;
+	 @include min-screen($mobile) { 
+     	padding: 60px 0;
+	 }
+
+	 h2 {
+	 	font-size: 25px;
+	    @include min-screen($mobile) { 
+	     	font-size: 30px;
+		}
+	 }
+}
+
+.contenido-datos-personales {
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    @include min-screen($mobile) {  
+		flex-direction: row;
+    }
+
+    .box-perfil {
+	    width: 50%;
+	    position: relative;
+	    margin:0 0 60px 0;
+	    @include min-screen($mobile) {  
+			flex-direction: row;
+			margin:0;
+	    }
+
+	}
+
+	.box-direccion {
+	    width: 50%;
+	    position: relative;
+	    display: none;
+	}
+
+	.box-direccion {
+		 .row {
+		    margin: 0;
+		}
+
+		a#address-update {
+		    font-size: 0;
+		    &:before {
+		    	content: "Alterar datos";
+			    font-size: 18px;
+			    font-size: 1.125rem;
+			    line-height: 12px;
+			    outline: 0;
+			    color: #337ab7;
+			    font-size: 15px;
+			    line-height: 15px;
+		    }
+		}
+	}
+
+}
+
+/* Botones */
+
+a#edit-data-link {
+    font-size: 0!important;
+}
+
+a#edit-data-link:before {
+    content: "Modificar datos";
+    font-size: 18px;
+    font-size: 1.125rem;
+    line-height: 12px;
+    outline: 0;
+    color: white;
+    font-size: 15px;
+    line-height: 15px;
+}
+
+.new-address-link a.address-update {
+    font-size: 0!important;
+}
+
+.profile-detail-display-nickname {
+    display: none;
+}
+
+.edit.edit-address-link {
+    // display: none;
+}
+
+.new-address-link a.address-update:before {
+    content: "Ingresar nueva dirección";
+    font-size: 18px;
+    font-size: 1.125rem;
+    line-height: 12px;
+    outline: 0;
+    color: white;
+    font-size: 15px;
+    line-height: 15px;
+}
+
+
+	.account #account-content .modal-body .profile-detail-form-contact-data h5 {
+		font-size: 0!important;
+		&:before {
+			color: #333;
+		    font-size: 15px;
+		    font-weight: 400;
+		    line-height: 22px;
+		    margin: 0px 0 10px 0;
+		    content: 'Datos de contacto:';
+		}
+	}
+
+/* Hide Default Name VTEX */
+#editar-perfil {
+
+	label[for=nome] {
+		font-size: 0!important;
+		&:before {
+			font-size: 13px;
+		    display: inline-block;
+		    line-height: 12px;
+		    content: 'Nombres:';
+		}
+	}
+	label[for=sobrenome] {
+		font-size: 0!important;
+		&:before {
+			font-size: 13px;
+		    display: inline-block;
+		    line-height: 12px;
+		    content: 'Apellidos:';
+		}
+	}
+	label[for=apelido] {
+		font-size: 0!important;
+		&:before {
+			font-size: 13px;
+		    display: inline-block;
+		    line-height: 12px;
+		    content: 'Apodo:';
+		}
+	}
+	label[for=nascimento] {
+		font-size: 0!important;
+		&:before {
+			font-size: 13px;
+		    display: inline-block;
+		    line-height: 12px;
+		    content: 'Fecha de nacimiento:';
+		}
+	}
+	label[for=cpf] {
+		font-size: 0!important;
+		&:before {
+			font-size: 13px;
+		    display: inline-block;
+		    line-height: 12px;
+		    content: 'Documento de identidad:';
+		}
+	}
+
+	label[for=telefone] {
+		font-size: 0!important;
+		&:before {
+			font-size: 13px;
+		    display: inline-block;
+		    line-height: 12px;
+		    content: 'Celular:';
+		}
+	}
+
+	label[for=celular] {
+		font-size: 0!important;
+		&:before {
+			font-size: 13px;
+		    display: inline-block;
+		    line-height: 12px;
+		    content: 'Otro teféfono:'; 
+		}
+	}
+	label[for=businessDocument] {
+		font-size: 0!important;
+		&:before {
+			font-size: 13px;
+		    display: inline-block;
+		    line-height: 12px;
+		    content: 'RUC:'; 
+		}
+	}
+
+	label[for=corporateName] {
+		font-size: 0!important;
+		&:before {
+			font-size: 13px;
+		    display: inline-block;
+		    line-height: 12px;
+		    content: 'Razón Social:';
+		}
+	}
+	label[for=stateRegistration] {
+		font-size: 0!important;
+		&:before {
+			font-size: 13px;
+		    display: inline-block;
+		    line-height: 12px;
+		    content: 'Dirección de empresa:';
+		}
+	}
+
+	label[for=fancyName] {
+		font-size: 0!important;
+		&:before {
+			font-size: 13px;
+		    display: inline-block;
+		    line-height: 12px;
+		    content: 'Nombre comercial:';
+		}
+	}
+
+
+	.profile-detail-form-personal-data {
+		h5 {
+			font-size: 0!important;
+			&:before {
+				content: "Datos personales:";
+			    color: #333;
+			    font-size: 15px;
+			    font-weight: 400;
+			    line-height: 22px;
+			    margin: 0px 0 10px 0;
+			}
+		}
+	}
+	.profile-detail-display-nickname {
+		display: none;
+	}
+	.form-personal-data-nickname {
+		display: none;
+	}
+	.form-personal-data-cpf {
+		 @include min-screen($mobile) {  
+			display: inline-block;
+			margin:0 20px 0 0;
+		 }
+	}
+	.form-personal-data-date-of-birth {
+		 @include min-screen($mobile) {  
+			display: inline-block;
+		 }
+	}
+	#business-toggle {
+	    font-size: 0;
+	    display: none;
+	    &:before {
+	    	content: 'Incluir dados de Empresa';
+		    font-size: 13px;
+		    display: inline-block;
+		    line-height: 13px;
+	    }
+
+	    &[data=on] {
+	    	&:before {
+	    		content: 'No utilizar los datos de Empresa';
+	    	}
+	    }
+	}
+
+	.profile-detail-form-contact-data {
+		@include min-screen($mobile) {  
+	    	padding: 20px 0 0 0;
+	    }
+	}
+
+	.form-contact-data-state-registration {
+		// display: none;
+	}
+
+
+
+}
+
+
+#address-edit {
+
+	label[for=addressName] {
+		font-size: 0!important;
+		&:before {
+			font-size: 13px;
+		    display: inline-block;
+		    line-height: 12px;
+		    content: 'Identificación de la dirección: *';
+		}
+	}
+	label[for=neighborhood] {
+		font-size: 0!important;
+		&:before {
+			font-size: 13px;
+		    display: inline-block;
+		    line-height: 12px;
+		    content: 'Distrito';
+		}
+	}
+	label[for=postalCode] {
+		font-size: 0!important;
+		&:before {
+			font-size: 13px;
+		    display: inline-block;
+		    line-height: 12px;
+		    content: 'Código postal';
+		}
+	}	
+	label[for=reference] {
+		font-size: 0!important;
+		&:before {
+			font-size: 13px;
+		    display: inline-block;
+		    line-height: 12px;
+		    content: 'Referencia';
+		}
+	}
+	label[for=city] {
+		font-size: 0!important;
+		&:before {
+			font-size: 13px;
+		    display: inline-block;
+		    line-height: 12px;
+		    content: 'Ciudad';
+		}
+	}
+
+	label[for=receiverName] {
+		font-size: 0!important;
+		&:before {
+			font-size: 13px;
+		    display: inline-block;
+		    line-height: 12px;
+		    content: 'Nombre de receptor:';
+		}
+	}
+
+	label[for=state] {
+		font-size: 0!important;
+		&:before {
+			font-size: 13px;
+		    display: inline-block;
+		    line-height: 12px;
+		    content: 'Provincia';
+		}
+	}
+
+
+	
+	#myModalLabel {
+	    font-size: 0!important;
+	    &:before {
+	    	content: 'Nueva dirección';
+		    display: inline-block;
+		    line-height: 18px;
+		    font-size: 19px;
+	    }
+	}
+	.address-form-addressee {
+		// display: none;
+	}
+	.address-form-cep {
+		// display: none;
+	}
+
+	// .address-form-state label {
+	//     font-size: 0;
+	//     &:before {
+	//     	font-size: 13px;
+	// 	    display: inline-block;
+	// 	    line-height: 12px;
+	// 	    content: 'Provincia';
+	//     }
+	// }
+
+	.address-form-neighborhood {
+	    // display: none;
+	}
+
+	.form-contact-data-business-document label {
+	    font-size: 0;
+	    &:before {
+	    	font-size: 13px;
+		    display: inline-block;
+		    line-height: 12px;
+		    content: 'RUC:';
+	    }
+	}
+
+
+}
+
+#response-message h4 {
+  font-size: 0;
+  &:before {
+  	content: "Perfil actualizado con éxito!";
+  }
+}
+

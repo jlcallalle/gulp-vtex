@@ -1,0 +1,321 @@
+.conocenos {
+	.module.title {
+		display:block;
+		.sup {
+
+			.center {
+				@include min-screen($mobile) {  
+					padding: 0;
+				}
+			}
+			.titulo-conocenos {
+			      font-family: 'Montserrat', sans-serif;
+			      font-size: 30px;
+			      line-height: 33px;
+			      font-weight: 600;
+			      color: #1d2454;
+			      text-align: left;
+			      margin: 40px 0 0 0;
+			      @include min-screen($mobile) {  
+					line-height: 45px;
+					margin: 130px 0 0 0;
+				    font-size: 49px;
+				  }
+			      &:after {
+			        display: block;
+			        content: "";
+			        width: 32px;
+			        height: 7px;
+			        background:#1d2454;
+			        margin-top: 5px;
+			      }
+			}
+
+			.descrip {
+				text-shadow: none;
+				width: 100%;
+				@include min-screen($mobile) {  
+					width:670px;
+					margin:14px 0 0 0;
+				}
+				&:before {
+					display: none;
+				}
+
+				p {
+					color: #131f55;
+					font-size: 21px;
+				    font-family: 'Montserrat', sans-serif;
+				    font-weight: 400;
+					@include min-screen($mobile) {  
+						font-size: 24px;
+    					line-height: 38px;
+					}
+				}
+			}
+		}
+	}
+
+
+	.box-banner {
+		background: #96dde3;
+		height: 180px;
+		background-image: url(../arquivos/bg-legales.jpg);
+		background-position: 926px -57px;
+
+		@include min-screen($mobile) {  
+			height: 280px;
+			overflow: hidden;
+			background-image: none;
+		}
+		a {
+			img {
+				display: none;
+				@include min-screen($mobile) { 
+					display: block;
+				}
+			}
+		}
+	}
+
+	#content.list {
+		background-color:#f9f9f9;
+		@include min-screen($mobile) {  
+			background-position: top center;
+		}
+		.center {
+			@include min-screen($mobile) {   
+				//width: 100%;
+			}
+		}
+		.left {
+			@include min-screen($mobile) {   
+				width: 50%;
+				margin:0 70px 0 0;
+			}
+		}
+		.right {
+			@include min-screen($mobile) {   
+				width: 50%;
+				padding: 0;
+			}
+		}
+	}
+
+
+	.box-conocenos {
+		padding: 0;
+	    margin: 0 auto;
+	    @include min-screen($mobile) {  
+			padding: 60px 0 30px 0;
+		}
+	}
+
+}
+
+.conoce-box {
+    margin: 0 0 0 0;
+    @include min-screen($mobile) { 
+    	margin:0 20px 0 0;
+    	 &:last-child {
+	    	margin:0;
+	    }
+    }
+
+    .box-img {
+    	@include min-screen($mobile) { 
+	    	width: 400px;
+	    }
+    	img {
+		    width: 100%;
+		}
+    }
+    .box-text {
+	    padding: 10px;
+	    @include min-screen($mobile) { 
+	    	padding: 37px 0 0 0;
+	    }
+	    h2 {
+	    	color:#131f55;
+		    font-family: Montserrat;
+		    font-weight: bold;
+		    font-size: 25px;
+		    @include min-screen($mobile) { 
+		    	font-size: 35px;
+		    }
+		}
+		p {
+		    font-size: 15px;
+		    margin: 11px 0;
+		    line-height: 23px;
+		    @include min-screen($mobile) { 
+		    	font-size: 18px;
+		    }
+		}
+	}
+}
+
+
+
+.lista-conocenos {
+    padding: 15px 32px;
+    background: #f9f9f9;
+    @include min-screen($mobile) {  
+	    background: #f9f9f9;
+	    display: flex;
+	    padding: 0 20px 60px 20px;
+	}
+}
+
+
+.contenido-historia {
+	background: white;
+	@include min-screen($mobile) {  
+		padding: 95px 0;
+	}
+
+	.historia-conocenos {
+		padding: 37px 32px 68px 32px;
+	    background: white;
+	    @include min-screen($mobile) {  
+	    	display: flex;
+    		flex-direction: row;
+    		padding: 0 20px;
+	    }
+		h2 {
+			color:#131f55;
+		    font-family: Montserrat;
+		    font-weight: bold;
+		    font-size: 25px;
+		    @include min-screen($mobile) {  
+		    	font-size: 35px;
+		    }
+		}
+		.box-img {
+			padding: 30px 0 20px 0;
+			@include min-screen($mobile) {  
+		    	padding: 0;
+		    }
+			img {
+				width: 100%;
+			}
+		}
+		.left {
+			> h2 {
+				display: block;
+				 @include min-screen($mobile) {  
+			    	display: none;
+			    }
+			}
+		}
+		.right {
+			> h2 {
+				display: none;
+				@include min-screen($mobile) {   
+					display: block;
+					margin:0 0 14px 0;
+				}
+			}
+
+			p {
+				color: #3b3b3b;
+			    font-size: 15px;
+			    line-height: 25px;
+			    text-align: justify;
+			    margin:0 0 25px 0;
+			    @include min-screen($mobile) {   
+					font-size: 18px;
+					line-height: 24px;
+					margin:0 0 21px 0;
+			    }
+			    b {
+			    	color:$azul;
+			    }
+			}
+		}
+	} 
+}
+
+.slogan {
+	text-align: center;
+	span {
+		color:$azul;
+		font-family: $montserrat;
+		font-size: 18px;
+		font-weight: bold;
+		@include min-screen($mobile) {   
+			font-size: 20px;
+		}
+	}
+}
+
+.sub-title-conocenos {
+      font-family: $montserrat;
+      font-size: 25px;
+      line-height: 30px;
+      font-weight: bold;
+      color: #1d2454;
+      text-align: left;
+      margin: 40px 0 0 0;
+      padding: 0 50px 0 0;
+      @include min-screen($mobile) {  
+		    line-height: 43px;
+		    margin: 29px 0 0 0;
+		    font-size: 35px;
+		    max-width: 625px;
+	  }
+      &:after {
+        display: block;
+        content: "";
+        width: 32px;
+        height: 7px;
+        background:#1d2454;
+        margin-top: 5px;
+      }
+}
+
+
+.contenido-empresa {
+    background: #f9f9f9;
+	.historia-empresa {
+		padding: 13px 39px;
+		@include min-screen($mobile) {   
+	    	padding: 16px 39px;
+	    }
+	}
+}
+
+
+.año {
+  font-family: $montserrat;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+   @include min-screen($mobile) {    
+   	padding: 32px 0 0;
+   }
+}
+
+.lista-empresa {
+	padding: 45px 0;
+	@include min-screen($mobile) {   
+	    display: flex;
+	    align-items: center;
+	    justify-content: space-between;
+	    padding: 45px 0 0 0;
+    }
+	.box-empresa {
+		text-align: center;
+	    margin: 0 0 30px 0;
+
+	    .img-empresa {
+	    	@include min-screen($mobile) {  
+			    height: 158px;
+			    display: flex;
+			    align-items: center;
+			    justify-content: center;
+			    display: flex;
+	    	}
+	    }
+	}
+}

@@ -1,0 +1,231 @@
+.contactanos {
+	.module.title {
+		display:block;
+		.sup {
+			.center {
+				@include min-screen($mobile) {  
+					padding: 0;
+				}
+			}
+			.titulo-legales {
+			      font-family: 'Montserrat', sans-serif;
+			      font-size: 30px;
+			      line-height: 33px;
+			      font-weight: 600;
+			      color: #1d2454;
+			      text-align: left;
+			      margin: 40px 0 0 0;
+			      @include min-screen($mobile) {  
+					margin: 130px 0 0 0;
+					font-size: 49px;
+					line-height: 45px;
+				  }
+			      &:after {
+			        display: block;
+			        content: "";
+			        width: 32px;
+			        height: 7px;
+			        background:#1d2454;
+			        margin-top: 5px;
+			      }
+			}
+
+			.descrip {
+				text-shadow: none;
+				width: 100%;
+				@include min-screen($mobile) {  
+					width:670px;
+					margin:18px 0 0 0;
+				}
+				&:before {
+					display: none;
+				}
+				p {
+					color: #131f55;
+    				font-size: 14px;
+					@include min-screen($mobile) {  
+						font-size: 16px;
+					}
+				}
+			}
+		}
+	}
+
+	#content.list {
+		padding: 0;
+	}
+
+	.box-banner {
+		background: #96dde3;
+		height: 180px;
+		background-image: url(../arquivos/bg-legales.jpg);
+		background-position: 926px -57px;
+
+		@include min-screen($mobile) {  
+			height: auto;
+			background-image: none;
+			max-height: 250px;
+    		overflow: hidden;
+		}
+		a {
+			img {
+				display: none;
+				@include min-screen($mobile) { 
+					display: block;
+				}
+			}
+		}
+	}
+
+	#content.list {
+		background-repeat: no-repeat;
+		background-position: top center;
+	}
+
+
+	.box-preguntas {
+	    padding: 30px 0;
+	    max-width: 965px;
+	    margin: 0 auto;
+	    @include min-screen($mobile) {  
+			padding: 86px 0;
+		}
+	}
+}
+
+.box-atencion-cliente {
+    padding: 40px 0 0;
+    @include min-screen($mobile) {  
+		padding: 74px 0 0;
+	}
+}
+
+
+.left-tienda {
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  	@include min-screen($mobile) {  
+		width: 50%;
+		 padding: 0 50px;
+	}
+}
+
+.right-tienda {
+	display: none;
+	@include min-screen($mobile) {  
+		width: 50%;
+		display: block;
+	}
+	img {
+		width: 100%;
+		@include min-screen($mobile) {  
+			width: auto;
+		}
+	}
+}
+
+.box-ver-tiendas {
+	max-width: 1134px;
+    display: flex;
+	background: white;
+	flex-direction: column;
+	@include min-screen($mobile) {  
+		flex-direction: row;
+		height: 278px;
+		margin:0 auto;
+	}
+	h3 {
+	    color: blue;
+	    font-family: 'Montserrat', sans-serif;
+	    color: #131f55;
+	    font-size: 33px;
+	}
+	p {
+	    font-size: 15px;
+	    color: #434040;
+	}
+}
+
+.cont-btn {
+    margin: 45px 0 0 0;
+    text-align: left;
+}
+
+
+.box-contacto {
+    margin: 66px 0 0 0;
+    display: flex;
+    @include min-screen($mobile) {  
+		//width: 50%;
+	}
+}
+
+.formulario-contacto {
+	background-color:white;
+	background-repeat: no-repeat;
+    background-position: left top;
+    width: 100%;
+	@include min-screen($mobile) {  
+		padding: 56px 75px 0 75px;
+		width: 50%;
+		z-index: 100;
+	}
+
+	.box-form {
+	    max-width: 500px;
+	    padding: 30px 20px;
+	    margin: 0 auto;
+	    @include min-screen($mobile) {  
+			padding: 0;
+			margin:0;
+		}
+	}
+
+	h3 {
+	    color: blue;
+	    font-family: 'Montserrat', sans-serif;
+	    color: #131f55;
+	    font-size: 33px;
+	}
+	p {
+	    font-size: 15px;
+	    color: #434040;
+	}
+
+	form {
+	    max-width: 500px;
+	    padding: 48px 0;
+	}
+
+	.form-group {
+	    margin: 0 0 13px 0;
+	}
+
+	.form-group input {
+	    height: 49px;
+	}
+
+	.cont-btn {
+		text-align: center;
+		.btn-ver {
+			text-align: center;
+			margin:0 auto;
+		}
+	}
+
+
+}
+
+.image-contacto {
+	display: none;
+    @include min-screen($mobile) {  
+		width: 50%;
+		display: block;
+	}
+}
+
+.mensaje-formulario {
+	margin:25px 0 0 0;
+}

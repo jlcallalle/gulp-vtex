@@ -1,0 +1,411 @@
+.compare {
+	#content.list {
+	    background: white;
+	    padding: 20px 0 40px 0;
+	    @include min-screen($mobile) {   
+			padding: 80px 0 100px 0;
+	    }
+	}
+	.topWrapper {
+		display: none;
+	}
+	.comparar-outros {
+	    display: none;
+	}
+
+	.corpo-comparacao ul li h3 a {
+	   @include min-screen($mobile) {   
+	   	padding: 0 15px 0 0;
+	   }
+	}
+
+}
+
+.box-compare {
+	h2 {
+		display: none;
+	}
+}
+.corpo-comparacao {
+	table {
+		margin: 0 0 0 0;
+	    width: 100%;
+	    text-align: left;
+	    thead {
+	    	 td {
+		    	color: #434040;
+			    font-weight: normal;
+			    padding: 10px 10px 10px 10px;
+			    font-size: 14px;
+		    }
+		     th {
+		    	// padding: 10px;
+		    	@include min-screen($mobile) {   
+					padding: 20px 12px 35px 12px;
+		    	}
+		    }
+
+	    }
+	    
+	    tbody {
+	    	td {
+		    	color: #434040;
+			    font-weight: normal;
+			    padding: 20px 10px 30px 10px;
+			    font-size: 14px;
+		    }
+	    }
+
+	    .remover {
+	    	.remover-produto {
+	    		border: none;
+    			font-size: 12px;
+    			background: rgb(221, 221, 221);
+    			cursor: pointer;
+    			&:before{
+				    content: 'x';
+				    font-size: 14px;
+    			}
+	    	}
+	    }
+
+	    thead {
+	    	tr {
+	    		td {
+	    			&:first-child {
+	    				display: none;
+	    			}
+	    		}
+	    		th {
+	    			&:first-child {
+	    				display: none;
+	    			}
+	    		}
+	    	}
+	    }
+
+	}
+
+	tbody {
+		tr {
+			&:first-child {
+				display: none;
+			}
+			&:nth-child(3) {
+				display: none;
+			}
+			th {
+				display: none;
+			}
+		}
+		.remover {
+			display: none;
+		}
+	}
+
+	//new
+
+	ul {
+		li {
+			font-size: 0;
+			position: relative;
+			h3 {
+				font-size: 12px;
+
+				@include min-screen($mobile) {    
+				    height: 50px;
+				    display: flex;
+				    // align-items: center;
+				    justify-content: center;
+
+			    }
+
+
+				+ a {
+					font-size: 0;
+				    display: flex;
+				    align-items: center;
+				    justify-content: center;
+				    @include min-screen($mobile) {   
+						justify-content: flex-start;
+				    }
+				}
+				a {
+					color: #444242;
+				    font-weight: bold;
+				    font-size: 14px;
+				}
+			}
+			fieldset {
+				display: none;
+			}
+			em {
+				font-size: 0;
+				strong {
+					font-size: 14px;
+				    color: #444242;
+				    margin: 0 10px 0 0;
+				    font-weight: bold;
+				}
+				&.antes {
+					strong{
+						color: #444242;
+					    font-weight: 200;
+					    text-decoration: line-through;
+					}
+				}
+			}
+
+			a:first-child {
+			    width: 100%;
+			    display: block;
+			    padding: 0 0 10px 0;
+			    text-align: center;
+			    @include min-screen($mobile) {   
+					padding: 0;
+					text-align: left;
+			    }
+			    img {
+				    text-align: center;
+				    display: block;
+				    width: 140px;
+				    height: auto;
+				    margin: 0 auto;
+				    @include min-screen($mobile) {   
+						width: 180px;
+						margin: 0;
+				    }
+			    }
+			}
+		}
+	}
+
+	a.thickbox {
+	   display: none;
+	}
+	a.btn-comparar {
+	    display: block;
+	    font-size: 16px;
+	    letter-spacing: 1px;
+	    transition: all .25s ease-in-out;
+	    text-align: center;
+	    display: block;
+	    font-size: 13px;
+	    width: 170px;
+	    padding: 12px 0;
+	    margin: auto;
+	    text-transform: uppercase;
+	    background: #434040;
+	    color: #fff;
+	    margin: 30px auto;
+	    @include min-screen($mobile) {  
+			display: inline-block;
+	    }
+	}
+
+	p.flag{
+	    position: relative;
+	    font-size: 16px;
+	    font-family: Montserrat;
+	    width: 52px;
+	    height: 43px;
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    z-index: 20;
+	    background: #131f55;
+	    color:white;
+	    text-align: center;
+	    line-height: 30px;
+	}
+
+	.desc-word {
+	    position: absolute;
+	    top: 16px;
+	    font-size: 13px;
+	    font-weight: 300;
+	    text-align: center;
+	    display: block;
+	    width: 100%;
+	}
+
+
+
+	tr.atributos td {
+	    position: relative;
+	    font-weight: 300;
+    	font-size: 14px;
+	    &:before {
+	    	font-size: 14px;
+	    	font-weight: bold;
+    		color: #1c2256;
+	    }
+	    &:after {
+	    	content: '';
+		    width: 25px;
+		    height: 1px;
+		    background: #e8e8ee;
+		    position: absolute;
+		    bottom: 15px;
+		    width: 170px;
+		    left: 0;
+		    @include min-screen($mobile) {   
+ 				width: 263px;
+		    }
+	    }
+	}
+
+	tr.atributos.Marca td:before {
+	    content: 'Marca';
+	    position: absolute;
+	    top: -6px;
+	    font-weight: bold;
+	}
+
+	tr.atributos.Modelo td:before {
+	    content: 'Modelo';
+	    position: absolute;
+	    top: -6px;
+	    font-weight: bold;
+	}
+
+	tr.atributos.Tela td:before {
+	    content: 'Tela';
+	    position: absolute;
+	    top: -6px;
+	    font-weight: bold;
+	}
+	tr.atributos.Material td:before {
+	    content: 'Material de tapiz';
+	    position: absolute;
+	    top: -6px;
+	    font-weight: bold;
+	}
+	tr.atributos.Modelo td:before {
+	    content: 'Modelo';
+	    position: absolute;
+	    top: -6px;
+	    font-weight: bold;
+	}
+
+	tr.atributos.Estructura td:before {
+	    content: 'Estructura interna';
+	    position: absolute;
+	    top: -6px;
+	    font-weight: bold;
+	}
+
+	tr.atributos.Estructura.interna td {
+	   @include min-screen($mobile) {    
+	   		width: 250px;
+	   }
+	}
+
+	tr.atributos.Acolchado td:before {
+	    content: 'Acolchado';
+	    position: absolute;
+	    top: -6px;
+	    font-weight: bold;
+	}
+	tr.atributos.colchón td:before {
+	    content: 'Acabado del colchón';
+	    position: absolute;
+	    top: -6px;
+	    font-weight: bold;
+	}
+
+	tr.atributos.Medidas td:before, tr.atributos.Tamaño td:before  {
+	    content: 'Tamaño';
+	    position: absolute;
+	    top: -6px;
+	    font-weight: bold;
+	}
+
+	tr.atributos.Largo td:before {
+	    content: 'Largo (cm)';
+	    position: absolute;
+	    top: -6px;
+	    font-weight: bold;
+	}
+
+	tr.atributos.Ancho td:before {
+	    content: 'Ancho (cm)';
+	    position: absolute;
+	    top: -6px;
+	    font-weight: bold;
+	}
+
+	tr.atributos.Imagen td:before {
+	    content: 'Imagen';
+	    position: absolute;
+	    top: -6px;
+	    font-weight: bold;
+	}
+	tr.atributos.Alto td:before {
+	    content: 'Alto (cm)';
+	    position: absolute;
+	    top: -6px;
+	    font-weight: bold;
+	}
+	tr.atributos.Peso td:before {
+	    content: 'Peso total (kg)';
+	    position: absolute;
+	    top: -6px;
+	    font-weight: bold;
+	}
+	tr.atributos.País td:before {
+	    content: 'País';
+	    position: absolute;
+	    top: -6px;
+	    font-weight: bold;
+	}
+	tr.atributos.paquete td:before {
+	    content: 'Contenido del paquete';
+	    position: absolute;
+	    top: -6px;
+	    font-weight: bold;
+	}
+	tr.atributos.Tecnología td:before {
+	    content: 'Tecnología';
+	    position: absolute;
+	    top: -6px;
+	    font-weight: bold;
+	}
+
+
+	tr.atributos.Confortabilidad td:before , tr.atributos.firmeza td:before {
+	    content: 'Nivel de firmeza';
+	    position: absolute;
+	    top: -6px;
+	    font-weight: bold;
+	}
+	tr.atributos.Garantía td:before {
+	    content: 'Garantía del colchón';
+	    position: absolute;
+	    top: -6px;
+	    font-weight: bold;
+	}
+
+
+	tr.atributos.Descripción.Icono {
+	    display: none;
+	}
+
+	tr.atributos.Descripción td:before {
+	    content: 'Descripción';
+	    position: absolute;
+	    top: -6px;
+	    font-weight: bold;
+	}
+
+
+}
+
+
+.box-tabla {
+	@include min-screen($mobile) { 
+		display: block;
+	    max-width: 400px;
+    }
+}
+

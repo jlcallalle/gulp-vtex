@@ -1,0 +1,62 @@
+{
+  "name": "vtex-speed",
+  "version": "4.0.1",
+  "accountName": "drimer",
+  "secureUrl": true,
+  "readmeFilename": "README.md",
+  "description": "VTEX Store development tools - reverse proxy, compilation, minification, optimization and more!",
+  "scripts": {
+    "start": "grunt"
+  },
+  "dependencies": {
+    "animate.css": "^3.5.2",
+    "font-awesome": "^4.7.0",
+    "jquery": "^2.2.4",
+    "owl.carousel": "^2.1.4"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.23.6",
+    "bxslider": "^4.2.14",
+    "connect-http-please": "^0.3.0",
+    "grunt": "~1.0.1",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-coffee": "^1.0.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "^1.0.1",
+    "grunt-contrib-imagemin": "^1.0.0",
+    "grunt-contrib-less": "^1.3.0",
+    "grunt-contrib-uglify": "^1.0.1",
+    "grunt-contrib-watch": "~1.0.0",
+    "grunt-spritesmith": "^6.3.1",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.0",
+    "jpegtran-bin": "^3.0.4",
+    "normalize.css": "^8.0.0",
+    "proxy-middleware": "^0.15.0",
+    "sass-mediaqueries": "^1.6.1",
+    "serve-static": "^1.10.0",
+    "slick-carousel": "^1.8.1",
+    "swiper": "^4.3.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/vtex/speed.git"
+  },
+  "keywords": [
+    "grunt",
+    "coffee",
+    "less",
+    "livereload",
+    "vtex"
+  ],
+  "license": "MIT"
+}

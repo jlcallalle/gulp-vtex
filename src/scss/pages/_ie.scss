@@ -1,0 +1,131 @@
+//Fix IE
+
+.mensaje-ie {
+    display: none;
+    position: absolute;
+    top: 174px;
+    background: white;
+    padding: 25px;
+    border: 1px solid gray;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    width: 750px;
+    text-align: center;
+    z-index: 999999;
+}
+
+.ie11, .ie10, ie9 {
+	.mensaje-ie  {
+		display: block;
+	}
+	.bx-wrapper .bx-pager {
+	  z-index: 999999999;
+	}
+}
+
+
+.ie10 {
+    #nav {
+        position: relative!important;
+        z-index: 999999999!important;
+    }
+    .category{
+        position: relative;
+        z-index: 20;
+    }
+
+    #header .in #nav .category li.i.wh {
+        top:0;
+    }
+    .i.wh {
+        top:0;
+    }
+
+    .ocultar-header #nav .category li.li-fixed-car{
+          display:inline-block!important;
+    }
+
+    .beneficios{
+        position:relative;
+    }
+
+    section.row.modulo.beneficios {
+        position: relative;
+    }
+
+    span.bv {
+        display: none!important;
+    }
+    .logo-marca {
+        display: none!important;
+    }
+    #header .in #nav .category li .wHoverNav ul.lista-marca {
+        display: block;
+    }
+    #header .in #nav .category li .wHoverNav .sub .lista-marca a {
+        display: block;
+    }
+
+    #header .su .center {
+       display: block;
+    }
+
+    #header .su .busca {
+       width: 37%;
+    }
+
+    #header .su .btn-tel {
+       width: auto;
+    }
+
+    #social .center {
+        display: block!important;
+        text-align: center;
+        padding: 12px 0;
+    }
+    #social .box-metodos .title {
+        display: inline-block!important;
+        vertical-align: middle!important;
+    }
+    #social .box-metodos img {
+        width: auto!important;
+        display: inline-block!important;
+        vertical-align: middle!important;
+    }
+
+
+    #social .box-metodos {
+        display: inline-block!important;
+        margin: 20px;
+        vertical-align: middle;
+    }
+
+    #social .box-libros {
+        width: auto!important;
+        display: inline-block!important;
+        padding: 20px;
+        vertical-align: middle!important;
+    }
+
+    #social .redes{
+        display: inline-block!important;
+        vertical-align: middle!important;
+    }
+    #social ul a {
+        display: inline-block!important;
+        position: relative!important;
+        vertical-align: middle!important;
+    }
+
+    #social ul a i{
+        position: relative!important;
+        left: 50%!important;
+        top: 50%!important;
+        transform: translate(-50%, -50%)!important;
+        -webkit-transform: translate(-50%, -50%)!important;
+    }
+
+    
+
+}

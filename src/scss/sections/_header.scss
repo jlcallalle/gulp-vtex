@@ -1,0 +1,122 @@
+#header {
+	.btn-nav-mobile  {
+		@include min-screen($mobile) {   
+			display: none; 
+		}
+	}
+	&.ocultar-header{
+		background-image:  url(../arquivos/bg-fixed.jpg);
+		background-position: top center;
+		background-repeat: no-repeat;
+		background-color: #ffffff;
+		position: fixed;
+		// z-index: 9999999999;
+		z-index: 9999;
+		top: 0;
+		min-height: initial;
+		transition: all 0.4s ease-in;
+		width: 100%;
+		height: 52px;
+		box-shadow: -1px 2px 2px 0px rgba(0,0,0,0.1);
+		.su {
+			display: none;
+		}
+		.in {
+			height: 52px;
+			background: #ffffff;
+
+			#nav {
+				.category {
+				    li {
+					    &.i {
+							> a {
+								@include min-screen($mobile) {    
+							    }
+							}
+							 &.active {
+						    	> a {
+									@include min-screen($mobile) {    
+								    }
+								}
+
+						    }
+					    }
+				    }
+				}
+			}
+
+
+		}
+		.logo-fixed {
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    width: 100px;
+		    height: 88px;
+		    background-image: url(../arquivos/logo-fixed.jpg);
+		    background-repeat: no-repeat;
+		}
+
+	}
+}
+
+
+#header .in #nav .category li .wHoverNav.i ul li {
+	&.nav-conocenos {
+		display: none;
+		@include min-screen($mobile) {  
+			display: block;
+		}
+	}
+	&.nav-contactenos  {
+		display: none;
+		@include min-screen($mobile) {  
+			display: block;
+		}
+	}
+	&.nav-tiendas {
+		display: none;	
+		@include min-screen($mobile) {  
+			display: block;
+		}	
+	}
+}
+
+
+#header .in #nav .category li.conoce {
+    display: block;
+    @include min-screen($mobile) {  
+ 		display: none;
+    }
+}
+
+#header .in #nav .category li.i {
+    display: none;
+    @include min-screen($mobile) { 
+		display: block;
+    }
+}
+
+.dm_mobile #header .in #nav .category li.i {
+	display: none;
+}
+
+
+#header .su .btn-cart .carrito .cart {
+    // transform: scale(1.2);
+    // @include min-screen($mobile) {  
+    // 	transform: scale(1.1);
+    // }
+    // &:hover {
+    // 	transform: scale(1.2);
+    // 	@include min-screen($mobile) {  
+    // 		transform: scale(1.1);
+    // 	}
+    // }
+}
+
+.welcome {
+	a[href="/no-cache/user/logout"] {
+		font-size: 0!important;
+	}
+}

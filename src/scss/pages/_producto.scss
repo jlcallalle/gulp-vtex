@@ -1,0 +1,736 @@
+/* Productos */
+.product-main-view {
+	 background-repeat: no-repeat;
+	 background-position: top left;
+	 position: relative;
+	 padding: 0 20px;
+}
+
+.size-product {
+	background-image: url(/arquivos/talla.png);
+    background-repeat: no-repeat;
+    background-position: 12px center;
+    width: 310px;
+    border: 1px solid #bfbebf;
+    position: relative;
+    height: 44px;
+	select {
+	    width: 100%;
+	    height: 37px;
+	    background-color: white;
+	    border: 0px;
+	    outline: 0px;
+	    color: transparent;
+	    text-shadow: 0 0 0 #000;
+	    background-image: url(/arquivos/arow-bottom.jpg);
+	    background-repeat: no-repeat;
+	    background-position: 187px center;
+	    z-index: 100000;
+	    -moz-appearance: none;
+		 -webkit-appearance: none;
+		 appearance: none;
+	}
+
+	.box-plazas  {
+		background-image: url(/arquivos/arow-bottom.jpg);
+	    background-repeat: no-repeat;
+	    background-position: 280px 18px;
+		h2 {
+			cursor:pointer;
+			font-size: 15px;
+		    font-weight: 500;
+		    color: #676969;
+		    height: 44px;
+		    display: flex;
+		    align-items: center;
+		    position: relative;
+		    top: -3px;
+		    padding: 0 0 0 50px;
+
+		}
+		> ul {
+			display: none;
+			z-index: 9;
+    		position: relative;
+			&.active {
+				display: block;
+			}
+		}
+		.product-field {
+			font-size: 0;
+			> ul {
+
+				> li {
+					font-size: 15px;
+					padding: 10px;
+					background: white;
+				    position: relative;
+				    z-index: 9999;
+				    &:hover {
+				    	background: #f2f2f2;
+				    }
+				}
+			}
+		}
+
+		.item-relacionado ul {
+		    border-bottom: 1px solid #bfbebf;
+		    border-left: 1px solid #bfbebf;
+		    border-right: 1px solid #bfbebf;
+		}
+
+	}
+
+}
+
+
+.plugin-preco {
+	.productPrice {
+	    padding: 0 20px;
+	    &.doble-precio {
+	    	 display: flex;
+	    	justify-content: space-around;
+	    }
+	}
+}
+
+
+
+//productSpecificacion
+section.row.modulo.specification {
+    padding: 20px 20px;
+    @include min-screen($mobile) {  
+		padding: 45px 20px;
+	} 
+	.center {
+		@include min-screen($mobile) {  
+			width: 1240px;
+		} 
+	}
+}
+
+#caracteristicas  {
+	display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    padding: 50px 0 10px 0;
+
+    @include min-screen($mobile) {  
+		padding: 45px 0 10px 0;
+		flex-direction: row-reverse;
+	}
+
+	.tab-caracteristicas {
+		position: relative;
+		@include min-screen($mobile) {  
+			width: 48%;
+		} 
+	}
+
+	.tab-descripcion {
+		position: relative;
+		@include min-screen($mobile) {  
+			width: 48%;
+		} 
+	}
+
+	h4 {
+	    font-size: 14px;
+	    border-bottom: 7px solid #ededed;
+	    display: inline-block;
+	    margin: 0 0 15px 0;
+	    color: #000000;
+	    font-weight: 400;
+	    cursor:pointer;
+	    &.active {
+	    	border-bottom: 7px solid #131f55;
+	    }
+	    &.Caracteristicas {
+	    	    margin: 0 50px 20px 0;
+    			visibility: hidden;
+			    top: -36px;
+			    left: 0;
+			    @include min-screen($mobile) {  
+			    	position: absolute;
+					top: -47px;
+				} 
+    			&:before {
+    				content: 'Ficha Técnica ';
+				    color: black;
+				    visibility: visible;
+				    border-bottom: 7px solid #131f55;
+    			}
+	    }
+	    &.Descripcion {
+	    	position: absolute;
+		    top: -36px;
+		    left: 0;
+		    border-bottom: 7px solid #131f55;
+		    @include min-screen($mobile) {  
+				top: -47px;
+			} 
+	    }
+	}
+
+	table {
+	    margin: 0 0 0 0;
+	    border-top: 2px solid #ededed;
+	    width: 100%;
+	    text-align: left;
+
+	    &.Caracteristicas {
+	    	@include min-screen($mobile) {  
+			
+			} 
+	    	.even {
+	    		background: #f2f2f2;
+	    	}
+	    	tr {
+	    		height: 44px;
+	    	}
+	    	tr {
+			    line-height: 33px;
+	    		th {
+				    font-size: 14px;
+				    color: #434040;
+				    font-weight: normal;
+				    padding: 0 20px;
+				    @include min-screen($mobile) {  
+						width: 350px;
+				    }
+				    &.Descripcion {
+				    	display: none;
+				    }
+	    		}
+	    		td {
+				    font-size: 14px;
+				    color: #434040;
+				    font-weight: normal;
+				    padding: 0 10px 0 0;
+	    		}
+	    	}
+	    }
+
+	    &.Descripcion {
+
+	    	tr {
+	    		height: 44px;
+	    	}
+	    	tr {
+			    line-height: 33px;
+	    		th {
+				    font-size: 14px;
+				    color: #434040;
+				    font-weight: normal;
+				    padding: 0 20px;
+				    @include min-screen($mobile) {  
+						width: 350px;
+				    }
+				    &.Descripcion {
+				    	display: none;
+				    }
+	    		}
+	    		td {
+				    font-size: 14px;
+				    color: #434040;
+				    font-weight: normal;
+				    line-height: 24px;
+				    padding: 8px 0;
+	    		}
+
+	    		th[class*=" Icono-"] {
+	    			display: none;
+	    		}
+
+	    	}
+
+	    	td[class*=" Icono-"] {
+    			text-align: center;
+    			padding: 0;
+    			@include min-screen($mobile) {  
+					width: 350px;
+					padding: 8px 0;
+			    }
+
+    		}
+	    	
+	    }
+
+	    .name-field  {
+	    	// display: none;
+	    }
+
+	    .value-field {
+	    	font-size: 14px;
+	    }
+
+	}
+}
+
+
+
+
+.box-group-img {
+    display: flex;
+    padding: 20px 0 50px 0;
+    flex-wrap: wrap;
+    @include min-screen($mobile) {  
+		padding: 30px 25px;
+	} 
+}
+
+.new {
+    padding: 6px;
+   	margin:0 auto;
+    @include min-screen($mobile) { 
+		width: 31%;
+		margin: 0 0 15px 0;
+    }
+}
+
+
+//flag 
+.contentFlag {
+	position: absolute;
+	top: 0;
+	left: 15px;
+	text-align: center;
+	p {
+	  	&.flag {
+		      width: 80px;
+			  height: 60px;
+			  position: relative;
+			  top: 0;
+			  left: 0;
+			  z-index: 20;
+			  border: 1px solid;
+			  background: #131f55;
+			  border: black;
+			  color: white;
+			  font-size: 16px;
+			  line-height: 45px;
+			  font-size: 22px;
+			  position: relative;
+			  font-family: Montserrat;
+			  top: 0;
+			  font-weight: bold;
+		}
+
+	}
+	.flag {
+		.porcentajeDescuento {
+			font-size:19px; 
+		}
+	}
+
+	.desc-word {
+	  position: absolute;
+	  top: 19px;
+	  font-size: 13px;
+	  font-weight: 300;
+	  text-align: center;
+	  display: block;
+	  width: 100%;
+	}
+}
+
+
+
+.flab-detalle {
+	position: absolute;	
+    top: 0;
+    left: 0;
+    text-align: center;
+
+    @include min-screen($mobile) {  
+		position: absolute;
+		top: 0;
+	    left: 120px;
+	    text-align: center;
+    }
+	p {
+	  &.flag {
+		    width: 50px;
+	    	height: 42px;
+		    position: relative;
+		    top: 0;
+		    left: 0;
+		    z-index: 20;
+		    border: 1px solid;
+		    background: #131f55;
+		    border: black;	
+		    color: white;
+		    font-size: 16px;
+		    line-height: 30px;
+		    position: relative;
+		    font-family: Montserrat;
+		    top: 0;
+		    font-weight: bold;
+		    @include min-screen($mobile) { 
+		    	width: 84px;
+		    	height: 70px;
+				line-height: 51px;
+				font-size: 27px;
+		    }
+
+		}
+
+	}
+
+	.desc-word {
+	    position: absolute;
+	    top: 16px;
+	    font-size: 13px;
+	    font-weight: 300;
+	    text-align: center;
+	    display: block;
+	    width: 100%;
+	    @include min-screen($mobile) {  
+			top: 25px;
+	    }
+	}
+
+}
+
+
+
+#content.list .right .main .resultItemsWrapper .itemProduct .itemProduct ul li .item .productName {
+    @include min-screen($mobile) {  
+	    display: flex;
+	    align-items: center;
+	    justify-content: center;
+	    line-height: 18px;
+	    height: 37px;
+	    padding: 0 14px;
+  }
+}
+
+.producto {
+	.interes {
+		//display: none;
+	}
+	.product-main-view {
+		.payment {
+			img {
+				@include max-screen(400px) {  
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+
+.product-main-view {
+	.detail {
+		.skuList {
+			display: none;
+		}
+	}
+} 
+
+.search-multiple-navigator {
+	.medidas {
+		display: none;
+	}
+}
+
+
+.cantidad-producto {
+	position: relative;
+	.plus {
+		border-left: 1px solid #666666;
+	    position: absolute;
+	    width: 35px;
+	    height: 35px;
+	    top: 0;
+	    right: 0;
+	    cursor: pointer;
+	    font: normal normal normal 14px/1 FontAwesome;
+	    -moz-osx-font-smoothing: grayscale;
+	    display: flex;
+	    align-items: center;
+	    font-size: 18px;
+	    justify-content: center;
+	    &:before {
+	    	content: "\f067";
+	    }
+	}
+	.minus {
+		border-right: 1px solid #666666;
+	    position: absolute;
+	    width: 35px;
+	    height: 35px;
+	    top: 0;
+	    left: 0;
+	    cursor: pointer;
+	    font: normal normal normal 14px/1 FontAwesome;
+	    -moz-osx-font-smoothing: grayscale;
+	    display: flex;
+	    align-items: center;
+	    font-size: 18px;
+	    justify-content: center;
+	    &:before {
+	    	content: "\f068";
+	    }
+	}
+
+}
+
+/* Producto Movil Slider*/
+
+.producto-movil-slider {
+	  display: block;
+	  // display: none;
+	  @include min-screen($mobile) {  
+		display: none;
+	  }
+}
+
+// .swiper-container {
+//     width: 240px;
+//     height: 468px;
+//     img {
+//     	width: 240px;
+//     	height: 468px;
+//     }
+// }
+
+.swiper-container {
+	width: 100%;
+	margin:0 auto;
+    // width: 700px;
+    // height: 468px;
+    img {
+    	width: 100%;
+    }
+}
+
+.dm_mobile .product-main-view .apresentacao {
+	// display: none;
+}
+
+ @include max-screen($mobile) { 
+	.apresentacao #show {
+	    margin-bottom: 25px;
+	}
+}
+
+.product-main-view.colchones + .producto-movil-slider {
+    display: none;
+}
+
+.apresentacao #show #include {
+	@include max-screen($mobile) {  
+		overflow: auto;
+	}
+}
+
+.producto-movil-slider {
+	.swiper-button-prev, 
+	.swiper-container-rtl .swiper-button-next {
+		background-image: none!important;
+	    left: -32px!important;
+	}
+	.swiper-button-next, 
+	.swiper-container-rtl .swiper-button-prev {
+		background-image: none!important;
+	    right: -32px!important;
+	}
+
+}
+
+@include max-screen($mobile) {  
+	.product-main-view .apresentacao #show #include {
+		overflow: visible!important;
+	}
+
+	// .product-main-view .apresentacao  {
+	//     display: flex;
+	//     align-items: center;
+	//     justify-content: center;
+	// }
+
+}
+
+
+#scrollLoading {
+    font-size: 0;
+    display: block;
+    animation: fa-spin 2s infinite linear;
+    -webkit-animation: fa-spin 2s infinite linear;
+    animation: fa-spin 2s infinite linear;
+    font-family: FontAwesome;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    @include min-screen($mobile) {   
+		margin-top: 15px;
+    	margin-bottom: 0;
+    }
+    &:before {
+    	color:#121f55;
+    	content: "\f110";
+	    font-size: 30px;
+	    display: flex;
+	    align-items: center;
+	    justify-content: center;
+	    opacity: 0.8;
+	     @include min-screen($mobile) { 
+			font-size: 44px;
+	     }
+    }
+}
+
+
+
+.resultado-busca #content.list .left .menu-departamento .search-single-navigator h3 {
+    display: block;
+}
+.resultado-busca #content.list .left .menu-departamento .search-single-navigator {
+    display: block!important;
+}
+
+.resultado-busca #content.list .left .menu-departamento .search-single-navigator h3 a {
+    color: #6a6a6a;
+    display: block;
+    background: #fff;
+    font-size: 14px;
+    padding: 15px 0;
+    margin: 0 0 15px 0;
+    text-align: center;
+    font-weight: 600;
+}
+
+
+.resultado-busca #content.list .left .menu-departamento .search-multiple-navigator + div {
+    display: none!important;
+}
+
+#content.list .left .menu-departamento .search-single-navigator ul li a .last-word {
+	display: none;
+}
+
+
+
+.resultado-busca  #content.list .left .menu-departamento .search-single-navigator ul {
+	@include max-screen($mobile) {  
+    	display: none;
+    }
+}
+
+.resultado-busca  #content.list .left .menu-departamento .search-single-navigator ul.show {
+    @include max-screen($mobile) {  
+    	display: block;
+    	top: -15px;
+    	position: relative;
+    }
+}
+
+/* olcultar Filtro Tipo Almohadas*/
+.Almohadas #content.list .left .menu-departamento .search-multiple-navigator fieldset.filtro_tipo {
+    display: none;
+}
+
+.box-group-img {
+	display: none;
+}
+
+// http://drimer.vtexlocal.com.br/colchon-terra-cotton-cuna/p
+
+
+#content.list .left .menu-departamento .search-multiple-navigator fieldset label.active a {
+    color: #121f55;
+    font-weight: bold;
+}
+
+.resultado-busca.brand #content.list .left .menu-departamento .search-multiple-navigator + div {
+    display: block!important;
+}
+
+
+.resultado-busca .menu-departamento .search-single-navigator ul {
+    display: none;
+}
+
+.resultado-busca .module.title .sup .descrip {
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 45px;
+    line-height: 45px;
+    font-weight: 600;
+    color: #fff;
+    text-align: left;
+    text-shadow: 0 1px 1px #808080;
+    padding: 0 0 0 15px;
+}
+
+
+/* Sección Íconos */
+
+.tab-descripcion th.name-field.HTML-Iconos {
+    display: none;
+}
+
+#caracteristicas .tab-descripcion table.Descripcion tr td.HTML-Iconos {
+    display: flex;
+    flex-wrap: wrap;
+    /*align-items: center;*/
+    justify-content: center;
+    padding: 15px 0;
+    flex-direction: column;
+}
+
+@media only screen and (min-width: 680px) {
+    #caracteristicas .tab-descripcion table.Descripcion tr td.HTML-Iconos {
+        flex-direction: row;
+    }
+}
+
+.tab-descripcion ul.box-icono {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    /*margin: 0 0 16px 0;*/
+    padding: 15px;
+}
+
+@media only screen and (min-width: 680px) {
+    .tab-descripcion ul.box-icono {
+        width: 50%;
+        /* width: auto;
+       max-width: 50%;*/
+    }
+}
+
+.tab-descripcion li.title-icono {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.tab-descripcion li.subtitle-icono {
+    font-size: 12px;
+}
+
+.puff-cuadrado:after {
+    display: none;
+}
+
+@media only screen and (min-width: 680px) {
+    .puff-cuadrado:after {
+        display: block;
+        content: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' height='14'><text style='alignment-baseline:hanging;font-size:10px;font-family:Open Sans,sans-serif;'><tspan style='alignment-baseline:inherit;font-weight:600;'>Medidas</tspan> Largo 40cm, Ancho 40cm y Alto: 41cm </text></svg>");
+        position: absolute;
+        bottom: 46px;
+        left: -4px;
+        color: #434040;
+        font-size: 10px;
+        padding: 0 10px;
+        left: 151px;
+        width: auto;
+    }
+}
+

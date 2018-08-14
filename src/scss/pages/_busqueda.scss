@@ -1,0 +1,123 @@
+.resultado-busca {
+	#content.list {
+	    // background: white;
+	}
+	.module.title {
+		.sup {
+			.titulo-sessao:before{
+			    content: 'Resultado de búsqueda:';
+			    font-size: 45px;
+			    display: inline-block;
+			}
+			.titulo-sessao {
+			    font-size: 0;
+			    display: inline-block;
+			}
+		}
+	}
+
+	&.brand {
+		.module.title {
+			.sup {
+				.titulo-sessao:before{
+				    content: 'Resultado de Marca:';
+				}
+			}
+		}
+
+	}
+}
+
+
+.busqueda-no-encontrada {
+	background-position: top center;
+    background-repeat: no-repeat;
+    background-color: white;
+    margin: 0 auto 0;
+    padding: 40px 0;
+    text-align: center;
+	@include min-screen($mobile) {  
+		padding: 100px 0;
+		width: 575px;
+	}
+
+     .busca {
+	    height: 36px;
+	    border: 1px solid #d5d5d5;
+	    margin: 0 auto;
+	    overflow: hidden;
+	    input {
+	      &[type=text] {
+	        display: inline-block;
+	        border: none;
+	        width: 78%;
+	        height: 34px;
+	        font-size: 13px;
+	        padding: 0 0 0 10px;
+	        color: #131f55;
+	        box-shadow: none;
+	        line-height: 34px;
+	      }
+	      &[type=button] {
+	        width: 18px;
+	        height: 20px;
+	        display: inline-block;
+	        background: url(../arquivos/sprites.png) -182px -73px no-repeat #fff;
+	        border: none;
+	        font-size: 0;
+	        color: transparent;
+	        margin: 7px 12px 7px 7px;
+	        cursor: pointer;
+	        float: right;
+	        padding: 0;
+	      }
+	    }
+	  }
+}
+
+.face {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	.fa-frown-o {
+	    font-size: 45px;
+	    padding: 0 10px;
+	}
+
+}
+
+.title-ups {
+	span {
+	    color: #1c2258;
+	    font-size: 50px;
+	    font-family: 'Montserrat', sans-serif;
+	    font-weight: bold;
+	    display: inline-block;
+	}
+}
+
+.detalle-resultado {
+	padding: 10px 0 0 0;
+	h2 {
+		 font-family: 'Open Sans', sans-serif;
+	    color: #434040;
+	    font-size: 16px;
+	    font-weight: 600;
+	    margin: 0 0 8px 0;
+	    @include min-screen($mobile) {  
+ 			font-size: 21px;
+	    }
+	}
+	h3 {
+		color: #434040;
+	    font-size: 15px;
+	    @include min-screen($mobile) {  
+ 			font-size: 16px;
+	    }
+	}
+}
+
+.buscador-encontrado {
+	padding: 48px;
+}
+

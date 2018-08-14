@@ -1,0 +1,400 @@
+.legales {
+	.module.title {
+		display:block;
+		.sup {
+			.center {
+				@include min-screen($mobile) {  
+					padding: 0;
+				}
+			}
+			.titulo-legales {
+			      font-family: 'Montserrat', sans-serif;
+			      font-size: 30px;
+			      line-height: 33px;
+			      font-weight: 600;
+			      color: #1d2454;
+			      text-align: left;
+			      margin: 40px 0 0 0;
+			      @include min-screen($mobile) {  
+					margin: 130px 0 0 0;
+					font-size: 49px;
+					line-height: 45px;
+				  }
+
+			      &:after {
+			        display: block;
+			        content: "";
+			        width: 20px;
+    				height: 4px;
+			        background:#1d2454;
+			        margin-top: 5px;
+			        @include min-screen($mobile) {  
+						width: 32px;
+			        	height: 7px;
+			        }
+			      }
+			}
+
+			.descrip {
+				text-shadow: none;
+				width: 100%;
+				@include min-screen($mobile) {  
+					width:670px;
+					margin:18px 0 0 0;
+				}
+				&:before {
+					display: none;
+				}
+				p {
+					color: #131f55;
+    				font-size: 14px;
+					@include min-screen($mobile) {  
+						font-size: 16px;
+					}
+				}
+			}
+		}
+	}
+
+	.box-banner {
+		background: #96dde3;
+		height: 280px;
+		background-image: url(../arquivos/bg-legales.jpg);
+		background-position: 926px -57px;
+		
+		@include min-screen($mobile) {  
+			height: auto;
+			background-image: none;
+		}
+		a {
+			img {
+				display: none;
+				@include min-screen($mobile) { 
+					display: block;
+				}
+			}
+		}
+	}
+
+	.box-tab-legales {
+		padding:22px 0 0 0;
+		ul {
+			display:flex;
+			li {
+				a {
+					font-size: 9px;
+				    color: #131f55;
+				    display: inline-block;
+				    border: 1px solid #131f55;
+				    padding: 5px;
+				    margin: 0 5px 0 0;
+				    font-weight: bold;
+				    text-align:center;
+				    @include min-screen(440px) { 
+						font-size: 12px;
+				    }
+				    @include min-screen($mobile) {  
+			        	font-size: 16px;
+			        	padding: 11px 32px;
+			        	margin: 0 17px 0 0;
+			        	text-align:left;
+			        }
+				    &.active {
+				    	background: #131f55;
+				    	color:white;
+				    }
+				}
+			}
+		}
+	}
+
+	.flex {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+
+}
+
+.contenedor-tab {
+	padding:51px 20px;
+	.box-tab {
+		display:none;
+
+		h3 {
+			color: #131f55;
+		    font-family: Montserrat;
+		    font-weight: bold;
+		    //font-size: 30px;
+		    font-size: 26px;
+		    text-align: center;
+		    @include min-screen($mobile) {   
+				font-size: 34px;
+		    }
+		}
+		h4 {
+			color: #68b3bb;
+		    font-size: 20px;
+		    margin: 40px 0 0 0;
+
+		    &.subtitle {
+	    	    color: #131f55;
+			    text-align: center;
+			    font-size: 20px;
+			    font-weight: bold;
+			    margin-top: 50px;
+			    padding: 0;
+			    margin-bottom: 20px;
+			    @include min-screen($mobile) {   
+					padding: 0 150px;
+			    }
+		    }
+		}
+		p {
+			font-size: 14px;
+		    color: #6a6a6a;
+		    line-height: 22px;
+		    margin: 10px 0;
+		    text-align: justify;
+		    @include min-screen($mobile) {   
+				font-size: 15px;
+		    }
+		}
+		&.active {
+			display:block;
+		}
+		&#tab-2 {
+			h3 {
+			   @include min-screen($mobile) {  
+		        	margin:0 0 30px 0;
+		        }
+			}
+		}
+		ol {
+			font-size: 15px;
+		    color: #6a6a6a;
+		    line-height: 22px;
+		    margin: 10px 0;
+		    padding:5px 0 5px 20px;
+		    text-align: justify;
+
+		    li {
+		    	 list-style-type: square;
+		    	 margin:0 0 8px 0;
+		    }
+
+		    &.letras {
+				li {
+					list-style-type: lower-alpha;
+				}
+			}
+
+		    &.numeacion {
+				li {
+					list-style-type: decimal;
+				}
+			}
+
+		}
+		ul {
+			text-align: justify;
+		}
+
+		&.tab-libros {
+			h3 {
+				@include min-screen($mobile) {  
+					margin: 0 0 30px 0;
+				}
+			}
+			h4 {
+				color:black;
+				font-family: 'Open Sans', sans-serif;
+				font-size: 15px;
+				font-weight: 600;
+				margin:0;
+				padding: 0;
+				&.title { 
+					padding: 10px 0 0 0;
+				}
+			}
+			h5 {
+				font-weight: 300;
+			}
+		}
+	}
+}
+
+.legales  {
+	#content.list {
+		background-color:white;
+		background-repeat: no-repeat;
+		background-position: top center;
+	}
+}
+
+
+.row-line {
+	border-bottom: 1px solid #6a6a6a;
+	padding: 20px 0;
+	&.last {
+		border-bottom: none;
+	}
+}
+
+
+
+.box-formulario {
+	padding: 20px 0;
+	.row {
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+		@include min-screen($mobile) {   
+			flex-direction: row;
+			padding: 10px 0;
+		}
+		&.col-2 {
+			.form-group {
+				@include min-screen($mobile) {  
+					width: 50%;
+				}
+			}
+		}
+		&.col-3 {
+			.form-group {
+				@include min-screen($mobile) {  
+					width: 30%;
+				}
+			}
+		}
+		&.col-4 {
+			.form-group {
+				@include min-screen($mobile) {  
+					width: 25%;
+				}
+			}
+		}
+
+		&.row-check {
+			padding: 0 0 15px 0;
+			@include min-screen($mobile) {  
+				padding: 5px 0 10px 0;
+			}
+		}
+		.form-group {
+			width: 100%;
+			margin:0 0 10px 0;
+		    @include min-screen($mobile) {  
+				padding: 0 6% 0 0;
+				margin:0;
+			}
+		    &:last-child {
+		    	padding: 0;
+		    }
+		}
+		.form-check {
+			display: flex;
+			align-items: center;
+			margin:0 40px 0 0;
+		}
+		label {
+			padding: 4px 0;
+			font-size: 15px;
+			display: block;
+		}
+	}
+	.red {
+		color:red;
+	}
+}
+
+select {
+	 -webkit-appearance: none;
+  	-webkit-border-radius: 0px;
+}
+
+
+
+select.form-control {
+	background-image: url(/arquivos/select.jpg);
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+.form-control {
+	box-sizing: border-box;
+    display: block;
+    width: 100%;
+    padding: 4px 10px;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #8d8d8d;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    @include min-screen($mobile) {  
+ 		padding: .250rem .75rem;
+    }
+}
+
+.box-extra {
+	display: flex;
+	flex-direction: column;
+	@include min-screen($mobile) {  
+ 		flex-direction: row;
+    }
+	> div {
+		width: 100%;
+    	font-size: 14px;
+    	margin:0 0 14px 0;
+    	@include min-screen($mobile) { 
+			width: 50%;
+			margin:0;
+    	}
+	}
+}
+
+.btn-enviar {
+    position: relative;
+    z-index: 2;
+    letter-spacing: 1px;
+    transition: all .25s ease-in-out;
+    -webkit-transition: all .25s ease-in-out;
+    -moz-transition: all .25s ease-in-out;
+    -ms-transition: all .25s ease-in-out;
+    -o-transition: all .25s ease-in-out;
+    text-align: center;
+    display: block;
+    font-size: 13px;
+    width: 170px;
+    padding: 12px 0;
+    margin: auto;
+    text-transform: uppercase;
+    background: #434040;
+    color: #fff;
+
+    &:hover {
+    	transition: all .25s ease-in-out;
+		  -webkit-transition: all .25s ease-in-out;
+		  -moz-transition: all .25s ease-in-out;
+		  -ms-transition: all .25s ease-in-out;
+		  -o-transition: all .25s ease-in-out;
+		  background: #141f55;
+    }
+  }
+
+
+.box-enviar {
+    padding: 20px 0 40px 0;
+    @include min-screen($mobile) { 
+		padding: 50px 0 40px 0;
+	}
+}
+
+
+.box-formulario-libros {
+	.box-formulario .form-control {
+	    padding: 5px 10px;
+	}
+}

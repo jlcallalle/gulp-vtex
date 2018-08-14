@@ -1,0 +1,38 @@
+// Ayudas y Correciones
+
+@mixin rem($font-size, $base-size: 100) {
+    font-size: $font-size + px;
+    font-size: ($font-size / $base-size * 100 / 16) + rem;
+}
+
+// Percentage function
+
+@function percentage($object, $container) {
+    @return ($object / $container) * 100%;
+}
+
+// Clearfix
+
+@mixin clearfix {
+    &:before, &:after {
+        content: '';
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+
+// Vertical center
+
+@mixin vertical-center {
+    font-size: 0;
+
+    &:before {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+    }
+}

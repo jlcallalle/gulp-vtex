@@ -1,0 +1,202 @@
+.preguntas {
+	.module.title {
+		display:block;
+		.sup {
+			.center {
+				@include min-screen($mobile) {  
+					padding: 0;
+				}
+			}
+			.titulo-legales {
+			      font-family: 'Montserrat', sans-serif;
+			      font-size: 30px;
+			      line-height: 33px;
+			      font-weight: 600;
+			      color: #1d2454;
+			      text-align: left;
+			      margin: 40px 0 0 0;
+			      @include min-screen($mobile) {  
+					margin: 130px 0 0 0;
+					font-size: 45px;
+					line-height: 45px;
+				  }
+			      &:after {
+			        display: block;
+			        content: "";
+			        width: 32px;
+			        height: 7px;
+			        background:#1d2454;
+			        margin-top: 5px;
+			      }
+			}
+
+			.descrip {
+				text-shadow: none;
+				width: 100%;
+				@include min-screen($mobile) {  
+					width:670px;
+					margin:18px 0 0 0;
+				}
+				&:before {
+					display: none;
+				}
+				p {
+					color: #131f55;
+    				font-size: 14px;
+					@include min-screen($mobile) {  
+						font-size: 16px;
+					}
+				}
+			}
+		}
+	}
+
+
+
+	.box-banner {
+		background: #96dde3;
+		height: 180px;
+		background-image: url(../arquivos/bg-legales.jpg);
+		background-position: 926px -57px;
+
+		@include min-screen($mobile) {  
+			height: auto;
+			background-image: none;
+			max-height: 250px;
+    		overflow: hidden;
+		}
+		a {
+			img {
+				display: none;
+				@include min-screen($mobile) { 
+					display: block;
+				}
+			}
+		}
+	}
+
+
+	.box-preguntas {
+	    padding: 30px 0;
+	    max-width: 965px;
+	    margin: 0 auto;
+	    @include min-screen($mobile) {  
+			padding: 86px 0;
+		}
+	}
+
+}
+
+.preguntas { 
+
+	.accordion, .accordion * {
+		-webkit-box-sizing:border-box; 
+		-moz-box-sizing:border-box; 
+		box-sizing:border-box;
+	}
+
+	.accordion {
+		overflow:hidden;
+		background:#f7f7f7;
+	}
+
+	.accordion-section {
+	    margin: 0 0 20px 0;
+	}
+
+	.accordion-section-title {
+		width:100%;
+		padding:18px 20px;
+		display:inline-block;
+		background:#434040;
+		color:#fff;
+		justify-content: space-between;
+    	display: flex;
+    	font-size: 14px;
+    	@include min-screen($mobile) {  
+			font-size: 16px;
+		}
+    	&.active {
+			.icon-tab {
+				&:before {
+			    	content: "\f068";
+			    }
+			}
+		}
+		.icon-tab {
+		    display: inline-block;
+		    font: normal normal normal 14px/1 FontAwesome;
+		    font-size: inherit;
+		    text-rendering: auto;
+		    -webkit-font-smoothing: antialiased;
+		    -moz-osx-font-smoothing: grayscale;
+		    transform: translate(0, 0);
+		    &:before {
+		    	content: "\f067";
+		    }
+		}
+	}
+
+	.accordion-section-title.active, .accordion-section-title:hover {
+		background:#96dde3;
+		text-decoration:none;
+	}
+
+	.accordion-section:last-child .accordion-section-title {
+		border-bottom:none;
+	}
+
+	.accordion-section-content {
+		padding:15px;
+		display:none;
+		&.open {
+			display: block;
+		}
+
+		p {
+			font-size: 14px;
+		    color: #6a6a6a;
+		    line-height: 22px;
+		    margin: 10px 0;
+		    text-align: justify;
+		    @include min-screen($mobile) {   
+				font-size: 15px;
+		    }
+		}
+	}
+
+}
+
+
+.accordion-section-content  {
+		ol {
+			font-size: 15px;
+		    color: #6a6a6a;
+		    line-height: 22px;
+		    margin: 10px 0;
+		    padding:5px 0 5px 20px;
+		    text-align: justify;
+
+		    li {
+		    	 list-style-type: square;
+		    	 margin:0 0 8px 0;
+		    }
+
+		    &.letras {
+				li {
+					list-style-type: lower-alpha;
+				}
+			}
+
+		    &.numeacion {
+				li {
+					list-style-type: decimal;
+				}
+			}
+
+		}
+		ul {
+			text-align: justify;
+		}
+
+	}

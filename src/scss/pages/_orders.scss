@@ -1,0 +1,140 @@
+body.orders {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.orders {
+	.container {
+		width: 100%;
+		@include min-screen($mobile) {   
+			width: 940px;
+		}
+	}
+
+
+	#header.fixed .row {
+	    margin: 0;
+	}
+
+	.row {
+	    margin: 0;
+	}
+
+	
+	 #content.list {
+	    background: #fbfbfb;
+	}
+
+
+	.box-orders {
+    	padding: 20px 20px 0;
+    	@include min-screen($mobile) {  
+    		padding: 60px 0 0 0;
+    	}
+    }
+
+    .vtex-bootstrap {
+    	h1 {
+    		font-size: 25px;
+		    font-family: "Helvetica Neue";
+		    color: black;
+		    @include min-screen($mobile) { 
+		     	font-size: 30px;
+			}
+    	}
+
+    	.vtex-loading {
+    		.icon-spinner {
+    			opacity: .8;
+    			&:before {
+    				color: #121f55;
+    			}
+    		}
+    	}
+    }
+   
+
+	//Fix Boostrap
+	#header .btn-cart .btn {
+	    display: inline;
+	}
+
+	 #footer ul {
+	    margin: 0;
+	}
+
+	#footer {
+	    font-family: 'Open Sans', sans-serif;
+	}
+
+	#footer ul li.b a {
+		font-family: 'Open Sans', sans-serif;
+	}
+
+	#footer ul li.b {
+    	font-weight: 400;
+	}
+
+	#header .in #nav .category li .wHoverNav ul {
+		margin:0;
+	}
+
+
+
+	#header .in #nav .category li .wHoverNav a.btn {
+	    padding: 0;
+	    background: no-repeat;
+	    border: none;
+	    text-shadow: none;
+	    border-color: white;
+	    border-radius: 0;
+	    box-shadow: none;
+	    text-align: left;
+	}
+
+	#header .in #nav .category li a {
+		text-decoration: none;
+		box-sizing: content-box;
+	}
+	#header .in #nav .category {
+		margin:0;
+	}
+	#header .in #nav .category li .wHoverNav.i ul li {
+		font-style: normal;
+		box-sizing: content-box!important;
+	}
+
+	#social .box-libros a.libro {
+	    color: #676969;
+	}
+}
+
+
+
+//My orders checkout 
+.orders  {
+	.nav-tabs>li, .nav-pills>li:nth-child(2) {
+	    display: none;
+	}
+}
+
+
+.orders {
+	.myo-product-price span {
+	    // border: 1px solid;
+	}
+}
+.orders {
+	.h4-plus .cf .w-40.tr span {
+		// border:1px solid blue;
+	}
+
+	.h4-plus .cf .w-50.tr span {
+	    // border: 1px solid red;
+	}
+
+	.h4-plus .mb3 .dib .db > span { 
+	    // border: 1px solid orange;
+	}
+}
+

@@ -1,0 +1,282 @@
+/* Uploaded on: 25 Abril, 2018 - 10:00 am */
+
+@charset "utf-8";
+
+@import "https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600|Open+Sans:400,600,700";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600,700');
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  list-style: none;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: #fff;
+  overflow-x: hidden;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+em {
+  font-style: normal !important;
+}
+
+strong {
+  font-weight: 600;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+body, html {
+   @include min-screen($mobile) {  
+      position: relative;
+   }
+}
+
+blockquote {
+  &:before, &:after {
+    content: '';
+    content: none;
+  }
+}
+
+q {
+  &:before, &:after {
+    content: '';
+    content: none;
+  }
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  text-decoration: none;
+  color: #676969;
+}
+
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: 700;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input, select, textarea {
+  vertical-align: middle;
+  font-family: 'Open Sans', sans-serif;
+  outline: none;
+  font-size: 13px;
+}
+
+
+button {
+	outline:none;
+}
+
+button:focus { 
+    outline: none; 
+}
+
+button::-moz-focus-inner {
+ border: 0; 
+}
+
+
+:focus {outline:none;} 
+
+::-moz-focus-inner {border:0;};
+
+a:focus { 
+    outline: none; 
+}
+
+//contenedor 
+
+@mixin contenedor() {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.contenedor {
+    @include contenedor;
+    padding: 0 20px;
+}
+
+.error_text{
+  color: red !important;
+}
+
+.hide{
+  // display: none !important;
+  display: none;
+}
+
+.account {
+	.hide {
+		display: none;
+	}
+}
+
+#vtexIdUI-global-loader {
+    background-color: rgba(0, 0, 0, 0.2)!important;
+    background-image: none!important;
+    display: block;
+    &:before {
+    	font-family: FontAwesome;
+    	color:#121f55;
+    	content: "\f110";
+	    font-size: 40px;
+	    display: flex;
+	    align-items: center;
+	    justify-content: center;
+	    opacity: 0.8;
+	    width: 100%;
+	    height: 100%;
+	    animation: fa-spin 0.7s infinite linear;
+        -webkit-animation: fa-spin 0.7s infinite linear;
+        animation: fa-spin 0.7s infinite linear;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        // top:-100px;
+        position: relative;
+	     @include min-screen($mobile) { 
+			font-size: 44px;
+			top:-120px;
+	     }
+    }
+}
+
+
+
+//Fuente Icommon
+@font-face {
+  font-family: 'drimer';
+  src:  url('https://drimer.vteximg.com.br/arquivos/vtexdrimer.eot.css?8s73ys');
+  src:  url('https://drimer.vteximg.com.br/arquivos/vtexdrimer.eot.css?8s73ys#iefix') format('embedded-opentype'),
+    url('https://drimer.vteximg.com.br/arquivos/vtexdrimer.ttf.css?8s73ys') format('truetype'),
+    url('https://drimer.vteximg.com.br/arquivos/vtexdrimer.woff.css?8s73ys') format('woff'),
+    url('https://drimer.vteximg.com.br/arquivos/vtexdrimer.svg.css?8s73ys#drimer') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'drimer' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.icon-drimer-car:before {
+  content: "\e910";
+}
+.icon-cart5:before {
+  content: "\e90f";
+}
+.icon-online-shopping-cart:before {
+  content: "\e90e";
+}
+.icon-shopping-car-drimer:before {
+  content: "\e90d";
+}
+.icon-shopping-cart6:before {
+  content: "\e90b";
+}
+.icon-shopping-cart7:before {
+  content: "\e90c";
+}
+.icon-shopping-cart:before {
+  content: "\e900";
+}
+.icon-shopping-cart5:before {
+  content: "\e90a";
+}
+.icon-shopping-cart2:before {
+  content: "\e901";
+}
+.icon-shopping-cart4:before {
+  content: "\e909";
+}
+.icon-shopping-cart22:before {
+  content: "\e902";
+}
+.icon-shopping-cart3:before {
+  content: "\e906";
+}
+.icon-shopping-cart222:before {
+  content: "\e903";
+}
+.icon-cart4:before {
+  content: "\e908";
+}
+.icon-cart:before {
+  content: "\e904";
+}
+.icon-cart3:before {
+  content: "\e907";
+}
+.icon-cart2:before {
+  content: "\e905";
+}
+.icon-cart22:before {
+  content: "\e93a";
+}
